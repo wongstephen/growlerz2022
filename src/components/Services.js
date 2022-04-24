@@ -1,4 +1,5 @@
 import React from "react";
+import { DayCare } from "./DayCare";
 import { PlayPark } from "./PlayPark";
 
 export const Services = () => {
@@ -54,12 +55,13 @@ export const Services = () => {
               will take great care of your furry family member, providing plenty
               of exercise, socialization, and TLC.
             </p>
-            <a
+            {/* <a
               class="inline-flex items-center justify-center px-7 py-3 h-14 w-full md:w-auto text-lg leading-7 text-teal-50 bg-teal-500 hover:bg-teal-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-full shadow-lg"
               href="#"
             >
               Learn More
-            </a>
+            </a> */}
+            <DayCare />
           </div>
           {/* Taproom */}
           <div class="my-16">
