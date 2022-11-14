@@ -9,6 +9,7 @@ import { Faq } from "./components/Faq";
 import { Events } from "./components/Events";
 import { PlayPark } from "./components/PlayPark";
 import { Pricing } from "./components/Pricing";
+import { Contact } from "./components/Contact";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -25,6 +26,7 @@ function App() {
         <Pricing />
         <Events />
         <Faq />
+        <Contact />
       </div>
     </div>
   );

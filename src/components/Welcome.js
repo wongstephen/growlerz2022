@@ -23,7 +23,7 @@ export const Welcome = () => {
               Neighborhood at{" "}
               <span className="text-teal-500">5269 Rainier Ave. S</span>
             </p>
-            <img src={require("../assets/map-placeholder.jpeg")} />
+            <img src={require("../assets/long map.png")} />
             {/* <div class="flex flex-wrap mb-8 md:mb-16">
               <div class="w-auto py-1 mr-4">
                 <a

@@ -1,4 +1,5 @@
 import React from "react";
+import { PlayPark } from "./PlayPark";
 
 export const Services = () => {
   return (
@@ -30,12 +31,13 @@ export const Services = () => {
               dog-friendly park is the perfect place to bring your furry friend
               for a good run around. Ask about our new dog self-wash station!
             </p>
-            <a
+            {/* <a
               class="inline-flex items-center justify-center w-full py-3 text-lg font-medium leading-7 bg-teal-500 border border-transparent rounded-full shadow-lg px-7 h-14 md:w-auto text-teal-50 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
               href="#"
             >
               Learn More
-            </a>
+            </a> */}
+            <PlayPark />
           </div>
           {/* Play Park */}
           <div class="my-16">
