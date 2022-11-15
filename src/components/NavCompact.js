@@ -42,6 +42,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#pricing"
+                  onClick={close}
                 >
                   Pricing
                 </a>
@@ -50,6 +51,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#"
+                  onClick={close}
                 >
                   Pricing
                 </a>
@@ -58,6 +60,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#events"
+                  onClick={close}
                 >
                   Events
                 </a>
@@ -66,6 +69,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#faq"
+                  onClick={close}
                 >
                   FAQ
                 </a>
@@ -74,6 +78,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#contact"
+                  onClick={close}
                 >
                   Contact Us
                 </a>
