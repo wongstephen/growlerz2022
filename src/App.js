@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import paw from "./assets/paw@100x.png";
+import { Welcome } from "./components/Welcome";
+import { NavCompact } from "./components/NavCompact";
+import { NavFull } from "./components/NavFull";
+import { Services } from "./components/Services";
+import { Faq } from "./components/Faq";
+import { Events } from "./components/Events";
+import { PlayPark } from "./components/PlayPark";
+import { Pricing } from "./components/Pricing";
 
 function App() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="antialiased bg-body text-body font-body bg">
+      <div class="">
+        <header class="relative overflow-hidden max-w-7xl mx-auto">
+          <NavFull setOpen={setOpen} />
+          {open ? <NavCompact setOpen={setOpen} /> : <div></div>}
+          <Welcome />
+        </header>
+        <Services />
+        <Pricing />
+        <Events />
+        <Faq />
+      </div>
     </div>
   );
 }
