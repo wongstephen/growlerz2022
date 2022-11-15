@@ -40,7 +40,7 @@ export const Pricing = () => {
                 </div>
                 <p class="mb-6 text-gray-400 font-medium">
                   One entry for one dog. Add additional dogs from the same
-                  family for $6 more per entry.
+                  household for $6 more per entry.
                 </p>
                 <a
                   class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
@@ -82,7 +82,7 @@ export const Pricing = () => {
                 </div>
                 <p class="mb-6 text-gray-400 font-medium">
                   11 entries for one dog. Add additional dogs from the same
-                  family for $70 more.
+                  household for $70 more.
                 </p>
                 <a
                   class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
@@ -125,7 +125,7 @@ export const Pricing = () => {
                 </div>
                 <p class="mb-6 text-gray-400 font-medium">
                   Unlimited entries for one dog. Add additional dogs from the
-                  same family for $20 more per month.
+                  same household for $20 more per month.
                 </p>
                 <a
                   class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
@@ -139,7 +139,7 @@ export const Pricing = () => {
                 <li class="flex items-center mb-3 text-gray-500 font-medium">
                   <span>
                     Save by purchasing a yearly membership for $539. Each
-                    additional dog of the same family is $220 yearly.
+                    additional dog of the same household is $220 yearly.
                   </span>
                 </li>
               </ul>
@@ -196,7 +196,6 @@ export const Pricing = () => {
 
       {/* Day Care */}
       <div class="container px-4 mx-auto">
-        {/* Start 1 Day */}
         <div class="text-left">
           <h3 class="mb-6 text-3xl md:text-5xl lg:text-7xl text-gray-900 font-bold tracking-tight leading-snug md:leading-snug lg:leading-snug">
             Day Care
@@ -204,11 +203,53 @@ export const Pricing = () => {
           <p class="mb-8 text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
             Multi-day passes can can be redeemed on non-consecutive days. Day
             Care bundles never expire. 5% Discount on Dog Daycare with any Play
-            Park membership. Online reservations are highly encouraged, drop-ins
-            have very limited availability.
+            Park membership. Online reservations are highly encouraged, very
+            limited availability for drop-ins.
           </p>
         </div>
         <div class="flex flex-wrap justify-center -mx-4">
+          {/* Start 1/2 Day */}
+          <div class="w-full md:w-1/2 p-4">
+            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
+              <div class="px-8 pb-8">
+                <h3 class="mb-6 text-lg md:text-xl text-gray-800 font-medium">
+                  Half Day
+                </h3>
+                <div class="mb-6">
+                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
+                    $
+                  </span>
+                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
+                    22
+                  </span>
+                  <span class="inline-block ml-1 text-gray-500 font-semibold">
+                    one dog
+                  </span>
+                </div>
+                <p class="mb-6 text-gray-400 font-medium">
+                  5 hours day care for one dog. Add additional dogs from the
+                  same household for $16 more.
+                </p>
+                <a
+                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
+                  href="#"
+                >
+                  Get Started
+                </a>
+              </div>
+              {/* <div class="border-b border-gray-100"></div>
+              <ul class="self-start px-8 pt-8">
+                <li class="flex items-center mb-3 text-gray-500 font-medium">
+                  <span>
+                    5 hours day care for one dog. Add additional dogs from the
+                    same household for $16 more.
+                  </span>
+                </li>
+              </ul> */}
+            </div>
+          </div>
+          {/* End 1 day */}
+          {/* Start 1 Day */}
           <div class="w-full md:w-1/2 p-4">
             <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
               <div class="px-8 pb-8">
@@ -227,8 +268,8 @@ export const Pricing = () => {
                   </span>
                 </div>
                 <p class="mb-6 text-gray-400 font-medium">
-                  One entry for one dog. Add additional dogs from the same
-                  family for $20 more.
+                  Full day care for one dog. Add additional dogs from the same
+                  household for $22 more.
                 </p>
                 <a
                   class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
@@ -237,14 +278,14 @@ export const Pricing = () => {
                   Get Started
                 </a>
               </div>
-              <div class="border-b border-gray-100"></div>
+              {/* <div class="border-b border-gray-100"></div>
               <ul class="self-start px-8 pt-8">
                 <li class="flex items-center mb-3 text-gray-500 font-medium">
                   <span>
                     1/2 day is $22 for the first dog, and $16 additional dogs.
                   </span>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
           {/* End 1 day */}
@@ -274,7 +315,7 @@ export const Pricing = () => {
                 </div>
                 <p class="mb-6 text-gray-400 font-medium">
                   Five entries for one dog. Add additional dogs from the same
-                  family for $85 more.
+                  household for $85 more.
                 </p>
                 <a
                   class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
@@ -318,7 +359,7 @@ export const Pricing = () => {
                 </div>
                 <p class="mb-6 text-gray-400 font-medium">
                   Ten entries for one dog. Add additional dogs from the same
-                  family for $172.50 more.
+                  household for $172.50 more.
                 </p>
                 <a
                   class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"

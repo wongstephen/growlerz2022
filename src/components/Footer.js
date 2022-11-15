@@ -68,6 +68,14 @@ export const Footer = () => {
                   Newsletter
                 </a>
               </li>
+              <li className="mb-4">
+                <a
+                  className="inline-block font-medium text-gray-500 hover:text-gray-600"
+                  href="#footer"
+                >
+                  Social Media Icon Placeholder
+                </a>
+              </li>
             </ul>
           </div>
           <div className="w-full px-4 md:w-1/3 lg:w-4/12">

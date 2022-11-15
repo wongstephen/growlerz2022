@@ -25,11 +25,11 @@ export const Contact = () => {
           </div>
         </div>
         <div class="text-left mb-12">
-          <p class="text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
+          <p class="text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose ">
             We're located at 5269 Rainier Ave. S Seattle WA, 98118
           </p>
           <img
-            class="max-w-6xl mx-right mb-6 rounded-sm border-8 border-teal-100"
+            class="max-w-2xl w-11/12 mx-right mb-6 rounded-md border-4 border-teal-100 mx-auto my-4 md:mx-0"
             src={require("../assets/full-map.png")}
             alt=""
           />
