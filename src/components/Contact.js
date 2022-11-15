@@ -33,10 +33,6 @@ export const Contact = () => {
             src={require("../assets/full-map.png")}
             alt=""
           />
-          <p class="text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
-            Join Our Newsletter <br />
-            Newsletter Form Placeholder
-          </p>
         </div>
       </div>
     </section>

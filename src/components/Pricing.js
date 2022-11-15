@@ -7,7 +7,6 @@ export const Pricing = () => {
       class="py-20 xl:py-24 bg-trasnparent max-w-5xl mx-auto"
     >
       <div class="container px-4 mx-auto">
-        ¸
         <div class="text-left">
           <span class="inline-block mb-4 text-base text-teal-500 uppercase font-semibold tracking-[.2rem]">
             Pricing
