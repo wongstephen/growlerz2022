@@ -2,7 +2,7 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <section class="py-24 bg-trasnparent max-w-5xl mx-auto">
+    <section class="py-24 bg-trasnparent max-w-5xl mx-auto" id="contact">
       <div class="container px-4 mx-auto">
         <div class="relative mb-12 mx-auto text-left">
           <div class="relative">
@@ -15,7 +15,7 @@ export const Contact = () => {
 
             <p class="text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
               Contact us by Email or Phone <br />
-              growlerzseattle@gamil.com <br />
+              growlerzseattle@gmail.com <br />
               (206) 459-2726
             </p>
             <p class="text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">

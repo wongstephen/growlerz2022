@@ -55,7 +55,7 @@ export const NavFull = ({ setOpen }) => {
               <li className="">
                 <a
                   className="font-medium text-gray-500 hover:text-gray-900"
-                  href="#faq"
+                  href="#contact"
                 >
                   Contact
                 </a>

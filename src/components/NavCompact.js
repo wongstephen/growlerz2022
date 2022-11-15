@@ -41,9 +41,9 @@ export const NavCompact = (props) => {
               <li>
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#"
+                  href="#pricing"
                 >
-                  Features
+                  Pricing
                 </a>
               </li>
               <li>
@@ -57,9 +57,25 @@ export const NavCompact = (props) => {
               <li>
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#"
+                  href="#events"
                 >
-                  Resources
+                  Events
+                </a>
+              </li>
+              <li>
+                <a
+                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                  href="#faq"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                  href="#contact"
+                >
+                  Contact Us
                 </a>
               </li>
             </ul>
