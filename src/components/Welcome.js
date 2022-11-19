@@ -25,7 +25,7 @@ export const Welcome = () => {
                 5269 Rainier Ave. S, Seattle, WA
               </span>
             </p>
-            <img src={require("../assets/long map.png")} />
+            <img src={require("../assets/summary-map.png")} />
             {/* <div class="flex flex-wrap mb-8 md:mb-16">
               <div class="w-auto py-1 mr-4">
                 <a

@@ -2,7 +2,8 @@ import React from "react";
 import { DayCare } from "./DayCare";
 import { PlayPark } from "./PlayPark";
 
-export const Services = () => {
+export const Services = ({ data }) => {
+  // console.log(data);
   return (
     <section
       id="services"
@@ -21,12 +22,17 @@ export const Services = () => {
             <p class="inline-block mb-4 text-xl text-gray-800 uppercase font-semibold tracking-[.2rem]">
               Play Park
             </p>
-            <div class="mb-8">
-              <span className="font-semibold">Mon - Fri</span> 6pm - 9pm
-              <br />
-              <span className="font-semibold">Sat </span>12pm - 8pm,{" "}
-              <span className="font-semibold">Sun</span> 12pm - 6pm
-            </div>
+            {data && (
+              <div className="mb-8 text-sm text-gray-800 leadig-loose md:text-base md:leading-loose">
+                <span className="font-semibold">Mon - Fri</span>{" "}
+                {data["1_park_open_weekday"]} - {data["2_park_close_weekday"]}
+                <br />
+                <span className="font-semibold">Sat </span>
+                {data["3_park_open_sat"]} - {data["4_park_close_sat"]},{" "}
+                <span className="font-semibold">Sun</span>{" "}
+                {data["5_park_open_sun"]} - {data["6_park_close_sun"]}
+              </div>
+            )}
             <p class="mb-8 text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
               Looking for a fun and convenient way to exercise your dog? Our
               dog-friendly park is the perfect place to bring your furry friend
@@ -45,9 +51,12 @@ export const Services = () => {
             <p class="inline-block mb-4 text-xl text-gray-800 uppercase font-semibold tracking-[.2rem]">
               Day Care
             </p>
-            <div class="mb-8">
-              <span className="font-semibold">Mon - Fri</span> 7am - 6pm
-            </div>
+            {data && (
+              <div className="mb-8 text-sm text-gray-800 leadig-loose md:text-base md:leading-loose">
+                <span className="font-semibold">Mon - Fri</span>{" "}
+                {data["7_daycare_open"]} - {data["8_daycare_close"]}
+              </div>
+            )}
             <p class="mb-8 text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
               The perfect solution for busy pet parents! We offer a safe, fun,
               and stimulating environment for your dog to enjoy while you are
