@@ -11,6 +11,7 @@ import { Pricing } from "./components/Pricing";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { wpPages } from "./api/wp";
+import { ToTop } from "./components/ToTop";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -41,6 +42,7 @@ function App() {
         <Faq />
         <Contact />
         <Footer />
+        <ToTop /> 
       </div>
     </div>
   );
