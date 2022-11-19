@@ -48,7 +48,7 @@ export const Welcome = () => {
           <div class="w-full md:w-1/2 px-4 mb-12 md:mb-0">
             <div class="relative max-w-max mx-auto md:ml-auto md:mr-0 ">
               <img
-                class="m-auto rounded-tl-3xl rounded-br-3xl w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[32rem] xl:h-[32rem] border-4 border-teal-100 my-0"
+                class="m-auto rounded-tl-3xl rounded-br-3xl w-80 h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[32rem] xl:h-[32rem] border-4 border-teal-100 my-0"
                 src={require("../assets/jeyakumaran-mayooresan-LMNRdfa3QNk-unsplash.jpeg")}
                 alt=""
               />
