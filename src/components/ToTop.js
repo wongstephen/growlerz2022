@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export const ToTop = () => {
-  // When the user clicks on the button, scroll to the top of the document
-  // mybutton.addEventListener("click", backToTop);
   const [visible, setVisible] = useState(false);
 
   window.addEventListener("scroll", () => {
@@ -11,7 +9,7 @@ export const ToTop = () => {
 
   return (
     <div
-      className={`fixed flex items-center justify-center w-10 h-10 bg-teal-500 rounded-full  bottom-8 right-8 transition-all ${
+      className={`fixed flex items-center justify-center w-10 h-10 bg-teal-500 rounded-full bottom-8 right-8 transition-all ${
         visible
           ? "opacity-60 translate-y-0 cursor-pointer"
           : "opacity-0 translate-y-2 pointer-events-none"

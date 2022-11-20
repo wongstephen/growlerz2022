@@ -1,18 +1,21 @@
 import React from "react";
 
-export const NavCompact = (props) => {
-  const close = (event) => {
-    props.setOpen(false);
-    console.log(event);
+export const NavCompact = ({ open, setOpen }) => {
+  const closeNav = () => {
+    setOpen(false);
   };
+
   return (
     <div
-      className="fixed top-0 left-0 z-50 w-full h-full transition-transform bg-gray-900 bg-opacity-50"
-      onClick={close}
-      name="eventClose"
+      className={`fixed top-0  z-50 w-full h-full transition-all bg-gray-900 ${
+        open ? "bg-opacity-50 left-0" : "bg-opacity-0 right-[100%]"
+      }`}
+      onClick={closeNav}
     >
       <div
-        className="fixed top-0 bottom-0 left-0 w-4/6 max-w-xs bg-transparent"
+        className={`fixed top-0 bottom-0 w-4/6 max-w-xs bg-transparent transition-all duration-1000 ${
+          open ? "right-0 opacity-100" : "left-[100%] opacity-0"
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <nav className="relative h-full p-6 overflow-y-auto bg-white">
@@ -33,7 +36,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#services"
-                  onClick={close}
+                  onClick={closeNav}
                 >
                   Services
                 </a>
@@ -42,16 +45,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#pricing"
-                  onClick={close}
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#"
-                  onClick={close}
+                  onClick={closeNav}
                 >
                   Pricing
                 </a>
@@ -60,7 +54,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#events"
-                  onClick={close}
+                  onClick={closeNav}
                 >
                   Events
                 </a>
@@ -69,7 +63,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#faq"
-                  onClick={close}
+                  onClick={closeNav}
                 >
                   FAQ
                 </a>
@@ -78,7 +72,7 @@ export const NavCompact = (props) => {
                 <a
                   className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
                   href="#contact"
-                  onClick={close}
+                  onClick={closeNav}
                 >
                   Contact Us
                 </a>
@@ -104,12 +98,12 @@ export const NavCompact = (props) => {
             </div>
           </div>
         </nav>
-        {/* Close Button */}
+        {/* closeNav Button */}
         <a
           className="absolute p-4 top-5 right-3"
           href="#"
-          onClick={close}
-          name="closeAction"
+          onClick={closeNav}
+          name="closeNavAction"
         >
           <svg
             width="12"
