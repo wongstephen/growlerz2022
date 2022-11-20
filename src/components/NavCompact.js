@@ -7,30 +7,26 @@ export const NavCompact = ({ open, setOpen }) => {
 
   return (
     <div
-      className={`fixed top-0  z-50 w-full h-full transition-all bg-gray-900 ${
-        open ? "bg-opacity-50 left-0" : "bg-opacity-0 right-[100%]"
+      className={`fixed top-0  z-50 w-full h-full ease-linear bg-gray-900 ${
+        open ? "bg-opacity-50 left-0" : "bg-opacity-0 left-[-100%]"
       }`}
       onClick={closeNav}
     >
       <div
-        className={`fixed top-0 bottom-0 w-4/6 max-w-xs bg-transparent transition-all duration-1000 ${
-          open ? "right-0 opacity-100" : "left-[100%] opacity-0"
+        className={`fixed top-0 bottom-0 w-4/6 max-w-xs bg-transparent transition-all duration-500 ${
+          open ? "right-0 opacity-100" : "right-[-100%]"
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         <nav className="relative h-full p-6 overflow-y-auto bg-white">
           <div className="flex flex-col justify-between h-full">
-            <a
-              className="inline-flex items-center text-xl font-bold tracking-widest text-gray-900 uppercase max-w-max md:text-3xl"
-              href="#"
-            >
+            <div className="inline-flex items-center text-xl font-bold tracking-widest text-gray-900 uppercase max-w-max md:text-3xl">
               <img
-                className="h-16 md:h-32"
+                className="h-24 md:h-32"
                 src={require("../assets/logo.png")}
                 alt=""
               />
-              {/* <span className="ml-2">Growlerz</span> */}
-            </a>
+            </div>
             <ul className="py-6">
               <li>
                 <a

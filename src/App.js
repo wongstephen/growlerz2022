@@ -24,15 +24,11 @@ function App() {
     getData();
   }, []);
 
-  useEffect(() => {
-    console.log(open);
-  }, [open]);
-
   return (
     <div class="antialiased bg-body text-body font-body bg">
       <div class="">
         <header class="relative overflow-hidden max-w-7xl mx-auto">
-          <NavFull setOpen={setOpen} />
+          <NavFull setOpen={setOpen} open={open} />
           <NavCompact setOpen={setOpen} open={open} />
           <Welcome />
         </header>

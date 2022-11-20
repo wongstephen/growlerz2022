@@ -1,14 +1,16 @@
 import React from "react";
 
-export const NavFull = ({ setOpen }) => {
+export const NavFull = ({ setOpen, open }) => {
   return (
     <div className="bg-transparent">
       <nav className="container flex justify-between p-6 px-6 mx-auto">
         <div className="flex items-center justify-between w-full">
           <div className="w-1/2 xl:w-1/3">
-            <a
+            <p
               className="inline-flex items-center text-xl font-bold tracking-widest text-gray-900 uppercase max-w-max md:text-3xl"
-              href="#"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
             >
               <img
                 className="hidden md:block md:h-36"
@@ -16,7 +18,7 @@ export const NavFull = ({ setOpen }) => {
                 alt=""
               />
               <span className="ml-2 md:hidden">Growlerz</span>
-            </a>
+            </p>
           </div>
           <div className="w-1/2 xl:w-1/3">
             <ul className="hidden xl:flex xl:justify-center">
@@ -66,13 +68,17 @@ export const NavFull = ({ setOpen }) => {
             <div className="items-center justify-end hidden xl:flex">
               <a
                 className="inline-block px-4 py-2 mr-2 font-medium leading-5 text-gray-500 bg-transparent rounded-md hover:text-gray-900"
-                href="#"
+                href="https://growlerz.portal.gingrapp.com/#/public/login"
+                target="_blank"
+                rel="noreferrer"
               >
                 Log In
               </a>
               <a
                 className="inline-block px-4 py-2 text-sm font-medium leading-5 bg-teal-500 rounded-full shadow-lg text-teal-50 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
-                href="#"
+                href="https://growlerz.gingrapp.com/front_end/new_customer"
+                target="_blank"
+                rel="noreferrer"
               >
                 Sign Up
               </a>
