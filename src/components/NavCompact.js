@@ -23,7 +23,7 @@ export const NavCompact = ({ open, setOpen }) => {
             <div className="inline-flex items-center text-xl font-bold tracking-widest text-gray-900 uppercase max-w-max md:text-3xl">
               <img
                 className="h-24 md:h-32"
-                src={require("../assets/logo.png")}
+                src={require("../assets/logo-clear-bg.webp")}
                 alt=""
               />
             </div>

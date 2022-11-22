@@ -25,32 +25,17 @@ export const Welcome = () => {
                 5269 Rainier Ave. S, Seattle, WA
               </span>
             </p>
-            <img src={require("../assets/summary-map.png")} />
-            {/* <div className="flex flex-wrap mb-8 md:mb-16">
-              <div className="w-auto py-1 mr-4">
-                <a
-                  className="inline-block py-5 text-base font-medium leading-4 text-center bg-teal-500 rounded-full shadow-lg px-7 md:text-lg text-teal-50 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              <div className="w-auto py-1">
-                <a
-                  className="inline-block py-5 text-base font-medium leading-4 text-center text-gray-800 rounded-full shadow-lg px-7 md:text-lg bg-trasnparent hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
-                  href="#"
-                >
-                  Sign Up
-                </a>
-              </div>
-            </div> */}
+            <img
+              src={require("../assets/welcome-map.webp")}
+              alt="Map of growlerz"
+            />
           </div>
           <div className="w-full px-4 mb-12 md:w-1/2 md:mb-0">
             <div className="relative mx-auto max-w-max md:ml-auto md:mr-0 ">
               <img
                 className="m-auto rounded-tl-3xl rounded-br-3xl w-80 h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[32rem] xl:h-[32rem] border-2 border-teal-100 my-0"
-                src={require("../assets/welcome_image.jpg")}
-                alt=""
+                src={require("../assets/welcome.webp")}
+                alt="Two dogs"
               />
             </div>
           </div>

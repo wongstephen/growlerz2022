@@ -33,7 +33,7 @@ export const Contact = () => {
               </p>
               <img
                 className="w-11/12 max-w-2xl mx-auto my-4 border-2 border-teal-100 rounded-tl-3xl mx-right rounded-br-3xl"
-                src={require("../assets/full-map.png")}
+                src={require("../assets/full-map.webp")}
                 alt=""
               />
             </div>

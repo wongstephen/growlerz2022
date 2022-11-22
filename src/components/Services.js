@@ -69,8 +69,8 @@ export const Services = ({ data }) => {
         <div className="relative max-w-full mx-auto mt-4">
           <img
             className="relative mx-auto border-2 border-teal-100 rounded-tl-3xl rounded-br-3xl"
-            src={require("../assets/welcome.png")}
-            alt=""
+            src={require("../assets/park.webp")}
+            alt="Growlerz Park"
           />
         </div>
       </div>
