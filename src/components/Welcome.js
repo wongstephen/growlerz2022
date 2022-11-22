@@ -49,7 +49,7 @@ export const Welcome = () => {
             <div className="relative mx-auto max-w-max md:ml-auto md:mr-0 ">
               <img
                 className="m-auto rounded-tl-3xl rounded-br-3xl w-80 h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[32rem] xl:h-[32rem] border-2 border-teal-100 my-0"
-                src={require("../assets/jeyakumaran-mayooresan-LMNRdfa3QNk-unsplash.jpeg")}
+                src={require("../assets/welcome_image.jpg")}
                 alt=""
               />
             </div>
