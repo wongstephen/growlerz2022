@@ -41,7 +41,9 @@ function App() {
         <Events />
         <Faq />
         <Contact />
-        <Footer />
+        <Footer
+          data={pageData && pageData.filter((obj) => obj.id === 145)[0]["acf"]}
+        />
         <ToTop />
       </div>
     </div>

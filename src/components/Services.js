@@ -66,9 +66,9 @@ export const Services = ({ data }) => {
             </p>
           </div>
         </div>
-        <div className="relative max-w-4xl mx-auto mt-4">
+        <div className="relative max-w-full mx-auto mt-4">
           <img
-            className="relative mx-auto border-4 border-teal-500 rounded-xl"
+            className="relative mx-auto border-2 border-teal-100 rounded-tl-3xl rounded-br-3xl"
             src={require("../assets/welcome.png")}
             alt=""
           />
