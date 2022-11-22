@@ -1,382 +1,136 @@
 import React from "react";
+import { PriceCard } from "./PriceCard";
+import { PriceCardLoading } from "./PriceCardLoading";
 
-export const Pricing = () => {
+export const Pricing = ({ data }) => {
   return (
     <section
       id="pricing"
-      class="py-20 xl:py-24 bg-trasnparent max-w-5xl mx-auto"
+      className="max-w-5xl py-20 mx-auto xl:py-24 bg-trasnparent"
     >
-      <div class="container px-4 mx-auto">
-        <div class="text-left">
-          <span class="inline-block mb-4 text-base text-teal-500 uppercase font-semibold tracking-[.2rem]">
+      <div className="container px-4 mx-auto mb-16">
+        <div className="text-left">
+          <span className="inline-block mb-4 text-base text-teal-500 uppercase font-semibold tracking-[.2rem]">
             Pricing
           </span>
-          <h3 class="mb-6 text-3xl md:text-5xl lg:text-7xl text-gray-900 font-bold tracking-tight leading-snug md:leading-snug lg:leading-snug">
+          <h3 className="mb-6 text-3xl font-bold leading-snug tracking-tight text-gray-900 md:text-5xl lg:text-7xl md:leading-snug lg:leading-snug">
             Play Park
           </h3>
-          {/* <p class="mb-8 text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
-            Maecenas vehicula elit quis rutrum maximus. Sed finibus neque quis
-            tellus mattis, placerat mattis mi varius. Proin pharetra egetdiam et
-            sollicitudin.
-          </p> */}
         </div>
-        <div class="flex flex-wrap justify-center -mx-4">
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <h3 class="mb-6 text-lg md:text-xl text-gray-800 font-medium">
-                  Single Entry
-                </h3>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    12
-                  </span>
-                  {/* <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    per month
-                  </span> */}
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  One entry for one dog. Add additional dogs from the same
-                  household for $6 more per entry.
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>Puchase online or at the door</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Punch Card */}
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <div class="flex flex-wrap items-center justify-between mb-6">
-                  <h3 class="mr-3 text-lg md:text-xl text-gray-800 font-medium">
-                    Punch Card
-                  </h3>
-                  <span class="inline-block py-px px-2 text-xs leading-5 text-white bg-yellow-500 font-medium uppercase rounded-full">
-                    Popular
-                  </span>
-                </div>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    100
-                  </span>
-                  {/* <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    per month
-                  </span> */}
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  11 entries for one dog. Add additional dogs from the same
-                  household for $70 more.
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>Get 11 entries for the price of 10</span>
-                </li>
-              </ul>
-            </div>
-          </div>
 
-          {/* Membership Card */}
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <div class="flex flex-wrap items-center justify-between mb-6">
-                  <h3 class="mr-3 text-lg md:text-xl text-gray-800 font-medium">
-                    Membership
-                  </h3>
-                  {/* <span class="inline-block py-px px-2 text-xs leading-5 text-white bg-yellow-500 font-medium uppercase rounded-full">
-                    Popular
-                  </span> */}
-                </div>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    49
-                  </span>
-                  <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    per month
-                  </span>
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  Unlimited entries for one dog. Add additional dogs from the
-                  same household for $20 more per month.
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>
-                    Save by purchasing a yearly membership for $539. Each
-                    additional dog of the same household is $220 yearly.
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Membership Card */}
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <div class="flex flex-wrap items-center justify-between mb-6">
-                  <h3 class="mr-3 text-lg md:text-xl text-gray-800 font-medium">
-                    Self-Wash Station
-                  </h3>
-                  {/* <span class="inline-block py-px px-2 text-xs leading-5 text-white bg-yellow-500 font-medium uppercase rounded-full">
-                    Popular
-                  </span> */}
-                </div>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    25
-                  </span>
-                  <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    per use
-                  </span>
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  Bring your dity dog to Growlerz. The Self wash station is now
-                  open!
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>
-                    Bring and wash your dog during park hours, excluding
-                    Wednesdays. First come first serve.
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-center -mx-4">
+          {data ? (
+            <>
+              <PriceCard
+                title="Single Entry"
+                mainPrice={data.park_1_entry}
+                description={`One entry for one dog. Add additional dogs from the same
+                household for $${data.park_1_entry_addl} more per entry.`}
+                subdescription={"Puchase online or at the door"}
+                link="#"
+              />
+              <PriceCard
+                title="Punch Card"
+                mainPrice={data.park_punch_card}
+                popular={true}
+                description={`11 entries for one dog. Add additional dogs from the same
+                household for $${data.park_punch_card_addl} more.`}
+                subdescription={`Get 11 entries for the price of 10`}
+                link="#"
+              />
+              <PriceCard
+                title="Membership"
+                mainPrice={data.park_membership_monthly}
+                mainPriceDesc="per month"
+                popular={false}
+                description={`Unlimited entries for one dog. Add additional dogs from
+                the same household for $${data.park_membership_monthly_addl} more per month.`}
+                subdescription={`Purchase a yearly membership for $${data.park_membership_yearly}. Each additional dog from the
+                same household is $${data.park_membership_yearly_addl} 
+                yearly.`}
+                link="#"
+              />
+              <PriceCard
+                title="Self-Wash Station"
+                mainPrice={data.dog_self_wash}
+                popular={false}
+                description={`Bring your dirty dog to Growlerz. The Self wash station is now open!.`}
+                subdescription="Bring and wash your dog during park hours except for
+                Wednesdays."
+                link=""
+              />
+            </>
+          ) : (
+            <>
+              <PriceCardLoading />
+              <PriceCardLoading />
+              <PriceCardLoading />
+              <PriceCardLoading />
+            </>
+          )}
         </div>
       </div>
 
       {/* Day Care */}
-      <div class="container px-4 mx-auto">
-        <div class="text-left">
-          <h3 class="mb-6 text-3xl md:text-5xl lg:text-7xl text-gray-900 font-bold tracking-tight leading-snug md:leading-snug lg:leading-snug">
+      <div className="container px-4 mx-auto">
+        <div className="text-left">
+          <h3 className="mb-6 text-3xl font-bold leading-snug tracking-tight text-gray-900 md:text-5xl lg:text-7xl md:leading-snug lg:leading-snug">
             Day Care
           </h3>
-          <p class="mb-8 text-lg md:text-xl text-gray-500 font-medium leading-loose md:leading-loose">
+          <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
             Multi-day passes can can be redeemed on non-consecutive days. Day
             Care bundles never expire. 5% Discount on Dog Daycare with any Play
             Park membership. Online reservations are highly encouraged, very
             limited availability for drop-ins.
           </p>
         </div>
-        <div class="flex flex-wrap justify-center -mx-4">
-          {/* Start 1/2 Day */}
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <h3 class="mb-6 text-lg md:text-xl text-gray-800 font-medium">
-                  Half Day
-                </h3>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    22
-                  </span>
-                  <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    one dog
-                  </span>
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  5 hours day care for one dog. Add additional dogs from the
-                  same household for $16 more.
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              {/* <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>
-                    5 hours day care for one dog. Add additional dogs from the
-                    same household for $16 more.
-                  </span>
-                </li>
-              </ul> */}
-            </div>
-          </div>
-          {/* End 1 day */}
-          {/* Start 1 Day */}
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <h3 class="mb-6 text-lg md:text-xl text-gray-800 font-medium">
-                  Single Day
-                </h3>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    38
-                  </span>
-                  <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    one dog
-                  </span>
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  Full day care for one dog. Add additional dogs from the same
-                  household for $22 more.
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              {/* <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>
-                    1/2 day is $22 for the first dog, and $16 additional dogs.
-                  </span>
-                </li>
-              </ul> */}
-            </div>
-          </div>
-          {/* End 1 day */}
-
-          {/* 5 days */}
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <div class="flex flex-wrap items-center justify-between mb-6">
-                  <h3 class="mr-3 text-lg md:text-xl text-gray-800 font-medium">
-                    5 Days
-                  </h3>
-                  <span class="inline-block py-px px-2 text-xs leading-5 text-white bg-yellow-500 font-medium uppercase rounded-full">
-                    Popular
-                  </span>
-                </div>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    180
-                  </span>
-                  {/* <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    per month
-                  </span> */}
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  Five entries for one dog. Add additional dogs from the same
-                  household for $85 more.
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>Save $10 over single day admissions</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* End 5 Days */}
-
-          {/* 10 days */}
-          <div class="w-full md:w-1/2 p-4">
-            <div class="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md hover:scale-105 transition duration-500">
-              <div class="px-8 pb-8">
-                <div class="flex flex-wrap items-center justify-between mb-6">
-                  <h3 class="mr-3 text-lg md:text-xl text-gray-800 font-medium">
-                    10 Days
-                  </h3>
-                  {/* <span class="inline-block py-px px-2 text-xs leading-5 text-white bg-yellow-500 font-medium uppercase rounded-full">
-                    Popular
-                  </span> */}
-                </div>
-                <div class="mb-6">
-                  <span class="relative -top-10 right-1 text-3xl text-gray-900 font-bold">
-                    $
-                  </span>
-                  <span class="text-6xl md:text-7xl text-gray-900 font-semibold">
-                    350
-                  </span>
-                  {/* <span class="inline-block ml-1 text-gray-500 font-semibold">
-                    per month
-                  </span> */}
-                </div>
-                <p class="mb-6 text-gray-400 font-medium">
-                  Ten entries for one dog. Add additional dogs from the same
-                  household for $172.50 more.
-                </p>
-                <a
-                  class="inline-block py-4 px-7 mb-4 w-full text-base md:text-lg leading-6 text-teal-50 font-medium text-center bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-full shadow-lg"
-                  href="#"
-                >
-                  Get Started
-                </a>
-              </div>
-              <div class="border-b border-gray-100"></div>
-              <ul class="self-start px-8 pt-8">
-                <li class="flex items-center mb-3 text-gray-500 font-medium">
-                  <span>Save $30 over single day admissions</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* End 10 Days */}
+        <div className="flex flex-wrap justify-center -mx-4">
+          {data ? (
+            <>
+              <PriceCard
+                title="Half Day"
+                mainPrice={`22`}
+                // mainPriceDesc="one dog"
+                description={`5 hours day care for one dog. Add additional dogs from the same household for $16 more.`}
+                subdescription={``}
+                link="#"
+              />
+              <PriceCard
+                title="Single Day"
+                mainPrice={`38`}
+                // mainPriceDesc="one dog"
+                description={`Full day care for one dog. Add additional dogs from the same
+                household for $22 more.`}
+                subdescription={``}
+                link="#"
+              />
+              <PriceCard
+                title="5 Days"
+                mainPrice={`180`}
+                popular={true}
+                // mainPriceDesc="one dog"
+                description={`Five entries for one dog. Add additional dogs from the same household for $85 more.`}
+                subdescription={`Save $10 over single day admissions`}
+                link="#"
+              />
+              <PriceCard
+                title="10 Days"
+                mainPrice={`350`}
+                popular={false}
+                // mainPriceDesc="one dog"
+                description={`Ten entries for one dog. Add additional dogs from the same household for $172.50 more.`}
+                subdescription={`Save $30 over single day admissions`}
+                link="#"
+              />
+            </>
+          ) : (
+            <>
+              <PriceCardLoading />
+              <PriceCardLoading />
+              <PriceCardLoading />
+              <PriceCardLoading />
+            </>
+          )}
         </div>
       </div>
     </section>

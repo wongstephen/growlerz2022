@@ -4,13 +4,13 @@ export const DayCare = () => {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <section id="day-care">
-      <p
+      <div
         className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer md:text-xl md:leading-loose"
         onClick={() => {
           setShowDetails(!showDetails);
         }}
       >
-        <div class="inline-flex items-center justify-center w-full py-3 text-lg font-medium leading-7 bg-teal-500 border border-transparent rounded-full shadow-lg px-7 h-14 md:w-auto text-teal-50 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+        <div className="inline-flex items-center justify-center w-full py-3 text-lg font-medium leading-7 bg-teal-500 border border-transparent rounded-full shadow-lg px-7 h-14 md:w-auto text-teal-50 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
           {showDetails ? (
             <>
               <p className="inline-block">Close</p>
@@ -33,7 +33,7 @@ export const DayCare = () => {
             <span>Learn More</span>
           )}
         </div>
-      </p>
+      </div>
       {showDetails && (
         <div className="w-11/12 mx-auto mb-8 text-lg font-normal font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
           <p className="mb-8">

@@ -69,17 +69,18 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="mb-4">
-                <div class="text-center text-gray-500 mt-6 flex justify-start">
+                <div className="flex justify-start mt-6 text-center text-gray-500">
+                  {/* Instagram */}
                   <a href="#">
                     <svg
-                      class="h-auto w-10 mr-4"
+                      className="w-6 h-auto mr-4 hover:text-teal-500"
                       xmlns="http://www.w3.org/2000/svg"
-                      viewbox="0 0 24 24"
+                      viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
                       <rect
                         x="2"
@@ -93,45 +94,47 @@ export const Footer = () => {
                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
                   </a>
+                  {/* Twitter */}
                   <a href="#">
                     <svg
-                      class="h-auto w-10 mr-4"
+                      className="w-6 h-auto mr-4 hover:text-teal-500"
                       xmlns="http://www.w3.org/2000/svg"
-                      viewbox="0 0 24 24"
+                      viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
                       <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                     </svg>
                   </a>
-                  {/* <a href="#">
-                    <svg
-                      class="h-auto w-10 mr-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewbox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                  </a> */}
+                  {/* Tic Toc */}
                   <a href="#">
                     <svg
-                      class="h-auto w-10 mr-4"
+                      className="w-6 h-auto mr-4 hover:text-teal-500"
+                      viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
-                      viewbox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M20 7.50414C18.5333 7.56942 15.52 6.75998 15.2 3H12.4V13.9666C12.4 17.0999 9.93253 18.4412 8.289 17.2507C6.20169 15.7389 7.60003 12.5958 10.2 12.9874V9.6583C8.20003 9.6583 4 10.4416 4 15.3374C4 21.6041 10.8146 21.4083 12.4 20.5824C14.9798 19.2385 15.6 17.7827 15.6 14.5541C15.6 11.6166 15.6 9.85413 15.6 9.0708C16.2667 9.39719 18.08 10.0891 20 10.2458" />
+                    </svg>
+                  </a>
+                  {/* Facebook */}
+                  <a href="#">
+                    <svg
+                      className="w-6 h-auto mr-4 hover:text-teal-500"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
                       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                     </svg>
@@ -163,7 +166,7 @@ export const Footer = () => {
       </div>
       <div className="border-b border-gray-100"></div>
       <p className="py-10 text-sm font-medium text-center text-gray-400 md:pb-16">
-        © 2022 Growlerz Seattle. All rights reserved.
+        © {new Date().getFullYear()} Growlerz Seattle. All rights reserved.
       </p>
     </section>
   );

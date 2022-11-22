@@ -20,6 +20,7 @@ export const NavFull = ({ setOpen, open }) => {
               <span className="ml-2 md:hidden">Growlerz</span>
             </p>
           </div>
+
           <div className="w-1/2 xl:w-1/3">
             <ul className="hidden xl:flex xl:justify-center">
               <li className="mr-12">
@@ -92,7 +93,7 @@ export const NavFull = ({ setOpen, open }) => {
           <svg
             width="35"
             height="35"
-            viewbox="0 0 32 32"
+            viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
