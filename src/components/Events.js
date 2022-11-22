@@ -1,6 +1,7 @@
 import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
 import { wpPosts } from "../api/wp";
+import { EventsCardLoading } from "./EventsCardLoading";
 
 export const Events = () => {
   // Backend request for wp-json/wp/v2/posts
@@ -19,7 +20,6 @@ export const Events = () => {
         id="events"
         className="max-w-5xl py-24 mx-auto md:pt-32 bg-trasnparent"
       >
-        {" "}
         <div className="container px-4 mx-auto">
           <div className="text-left">
             <span className="inline-block mb-4 text-base text-teal-500 uppercase font-semibold tracking-[.2rem]">
@@ -31,8 +31,11 @@ export const Events = () => {
           </div>
           {postData ? (
             postData.map((obj, idx) => (
-              <div className="flex flex-col max-w-4xl pt-12 -mx-4" key={idx}>
-                <div className="w-full px-4 mb-4 md:w-full">
+              <div
+                className="flex flex-wrap justify-center max-w-5xl pt-12 -mx-4"
+                key={idx}
+              >
+                <div className="w-full px-4 mb-4 md:w-2/3">
                   <div className="h-full group">
                     <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-md shadow-md group group-hover:bg-trasnparent hover:shadow-xl">
                       <h3 className="mb-4 text-xl font-bold leading-7 text-gray-900">
@@ -50,7 +53,13 @@ export const Events = () => {
               </div>
             ))
           ) : (
-            <p>Loading...</p>
+            <>
+              {Array(3)
+                .fill("")
+                .map((obj, idx) => (
+                  <EventsCardLoading key={idx} />
+                ))}
+            </>
           )}
         </div>
         {/*  */}

@@ -4,7 +4,10 @@ export const Faq = () => {
   return (
     <>
       {/* FAQ */}
-      <section id="faq" className="max-w-5xl py-24 mx-auto md:pt-32 bg-trasnparent">
+      <section
+        id="faq"
+        className="max-w-5xl py-24 mx-auto md:pt-32 bg-trasnparent"
+      >
         <div className="container px-4 mx-auto">
           <div className="text-left">
             <span className="inline-block mb-4 text-base text-teal-500 uppercase font-semibold tracking-[.2rem]">
@@ -15,7 +18,7 @@ export const Faq = () => {
             </h3>
           </div>
           <div className="flex flex-wrap max-w-4xl pt-12 -mx-4">
-            <div className="w-full px-4 mb-16 md:w-1/2">
+            <div className="w-full px-4 mb-4 md:w-1/2">
               <div className="h-full group">
                 <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-md shadow-md group group-hover:bg-trasnparent hover:shadow-xl">
                   <div className="absolute top-0 inline-flex items-center justify-center w-16 h-16 transition duration-200 transform -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 bg-trasnparent"></div>
