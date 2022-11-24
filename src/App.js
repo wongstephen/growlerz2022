@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
+import { useFetch } from "./components/hooks/useFetch";
 
 import { Welcome } from "./components/Welcome";
 import { NavCompact } from "./components/NavCompact";
@@ -10,12 +11,11 @@ import { Events } from "./components/Events";
 import { Pricing } from "./components/Pricing";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { wpPages } from "./api/wp";
 import { ToTop } from "./components/ToTop";
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [pageData, setPageData] = useState();
+  const pageData = useFetch("pages");
 
   const servicesRef = useRef();
   const pricingRef = useRef();
@@ -43,13 +43,6 @@ function App() {
         break;
     }
   };
-  useEffect(() => {
-    const getData = async () => {
-      const res = await wpPages();
-      setPageData(res);
-    };
-    getData();
-  }, []);
 
   return (
     <div className="antialiased bg-body text-body font-body bg">
@@ -62,14 +55,16 @@ function App() {
         <span ref={servicesRef}>
           <Services
             data={
-              pageData && pageData.filter((obj) => obj.id === 145)[0]["acf"]
+              pageData.data &&
+              pageData.data.filter((obj) => obj.id === 145)[0]["acf"]
             }
           />
         </span>
         <span ref={pricingRef}>
           <Pricing
             data={
-              pageData && pageData.filter((obj) => obj.id === 131)[0]["acf"]
+              pageData.data &&
+              pageData.data.filter((obj) => obj.id === 131)[0]["acf"]
             }
           />
         </span>
@@ -83,7 +78,10 @@ function App() {
           <Contact />
         </span>
         <Footer
-          data={pageData && pageData.filter((obj) => obj.id === 145)[0]["acf"]}
+          data={
+            pageData.data &&
+            pageData.data.filter((obj) => obj.id === 145)[0]["acf"]
+          }
           scrollTo={scrollTo}
         />
         <ToTop />

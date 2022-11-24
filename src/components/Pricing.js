@@ -3,14 +3,6 @@ import { PriceCard } from "./PriceCard";
 import { PriceCardLoading } from "./PriceCardLoading";
 
 export const Pricing = ({ data }) => {
-  const placeholderImg = () => {
-    Array(4)
-      .fill("")
-      .map((obj, idx) => {
-        return <PriceCardLoading key={idx} />;
-      });
-  };
-
   return (
     <section
       id="pricing"
