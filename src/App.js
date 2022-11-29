@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 import { Welcome } from "./components/Welcome";
@@ -16,6 +16,16 @@ import { ToTop } from "./components/ToTop";
 function App() {
   const [open, setOpen] = useState(false);
   const [pageData, setPageData] = useState();
+
+  const servicesRef = useRef();
+  const servicesScroll = () => {
+    servicesRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  // const pricingRef = useRef();
+  // const eventsRefs = useRef();
+  // const faqRefs = useRef();
+  // const contactRef = useRef();
+
   useEffect(() => {
     const getData = async () => {
       const res = await wpPages();
@@ -28,13 +38,21 @@ function App() {
     <div className="antialiased bg-body text-body font-body bg">
       <div className="">
         <header className="relative mx-auto overflow-hidden max-w-7xl">
-          <NavFull setOpen={setOpen} open={open} />
+          <NavFull
+            setOpen={setOpen}
+            open={open}
+            servicesScroll={servicesScroll}
+          />
           <NavCompact setOpen={setOpen} open={open} />
           <Welcome />
         </header>
-        <Services
-          data={pageData && pageData.filter((obj) => obj.id === 145)[0]["acf"]}
-        />
+        <span ref={servicesRef}>
+          <Services
+            data={
+              pageData && pageData.filter((obj) => obj.id === 145)[0]["acf"]
+            }
+          />
+        </span>
         <Pricing
           data={pageData && pageData.filter((obj) => obj.id === 131)[0]["acf"]}
         />

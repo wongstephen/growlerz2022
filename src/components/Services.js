@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { DayCare } from "./DayCare";
 import { PlayPark } from "./PlayPark";
 
-export const Services = ({ data }) => {
+export const Services = ({ data, servicesRef }) => {
+  const playParkRef = useRef();
+  const dayCareRef = useRef();
+
   return (
     <section
       id="services"
       className="relative max-w-5xl py-24 mx-auto overflow-hidden md:pb-32 bg-trasnparent"
+      ref={servicesRef}
     >
       <div className="container relative px-4 mx-auto">
         <div className="mx-auto text-left mb-18 md:mb-16">
@@ -17,7 +21,7 @@ export const Services = ({ data }) => {
             The best place in Seattle for you and your dog.
           </h1>
           {/* Play Park */}
-          <div className="my-16">
+          <div className="my-16" ref={playParkRef}>
             <p className="inline-block mb-4 text-xl text-gray-800 uppercase font-semibold tracking-[.2rem]">
               Play Park
             </p>
@@ -31,10 +35,10 @@ export const Services = ({ data }) => {
               dog-friendly park is the perfect place to bring your furry friend
               for a good run around. Ask about our new dog self-wash station!
             </p>
-            <PlayPark />
+            <PlayPark playParkRef={playParkRef} />
           </div>
-          {/* Play Park */}
-          <div className="my-16">
+          {/* Day Care */}
+          <div className="my-16" ref={dayCareRef}>
             <p className="inline-block mb-4 text-xl text-gray-800 uppercase font-semibold tracking-[.2rem]">
               Day Care
             </p>
@@ -50,7 +54,7 @@ export const Services = ({ data }) => {
               will take great care of your furry family member, providing plenty
               of exercise, socialization, and TLC.
             </p>
-            <DayCare />
+            <DayCare dayCareRef={dayCareRef} />
           </div>
           {/* Taproom */}
           <div className="my-16">

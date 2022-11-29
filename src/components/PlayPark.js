@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const parkRules = {
   parkrules: [
@@ -45,10 +45,11 @@ const parkRules = {
   ],
 };
 
-export const PlayPark = () => {
+export const PlayPark = ({ playParkRef }) => {
   const [showDetails, setShowDetails] = useState(false);
+
   return (
-    <section id="play-park">
+    <section id="play-park" ref={playParkRef}>
       <div
         className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer md:text-xl md:leading-loose"
         onClick={() => {
@@ -100,12 +101,12 @@ export const PlayPark = () => {
                 </li>
               ))}
             </ul>
-            <a
+            <div
               className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer r md:text-xl md:leading-loose"
               onClick={() => {
                 setShowDetails(!showDetails);
+                playParkRef.current.scrollIntoView({ behavior: "smooth" });
               }}
-              href="#services"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +122,7 @@ export const PlayPark = () => {
                   d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-            </a>
+            </div>
           </div>
         </div>
       )}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const DayCare = () => {
+export const DayCare = ({ dayCareRef }) => {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <section id="day-care">
@@ -55,12 +55,12 @@ export const DayCare = () => {
           </p>
 
           <div>
-            <a
+            <div
               className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer r md:text-xl md:leading-loose"
               onClick={() => {
                 setShowDetails(!showDetails);
+                dayCareRef.current.scrollIntoView({ behavior: "smooth" });
               }}
-              href="#services"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ export const DayCare = () => {
                   d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-            </a>
+            </div>
           </div>
         </div>
       )}

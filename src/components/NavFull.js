@@ -1,6 +1,6 @@
 import React from "react";
 
-export const NavFull = ({ setOpen, open }) => {
+export const NavFull = ({ setOpen, servicesScroll }) => {
   return (
     <div className="bg-transparent">
       <nav className="container flex justify-between p-6 px-6 mx-auto">
@@ -24,12 +24,13 @@ export const NavFull = ({ setOpen, open }) => {
           <div className="w-1/2 xl:w-1/3">
             <ul className="hidden xl:flex xl:justify-center">
               <li className="mr-12">
-                <a
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                  href="#services"
+                <p
+                  className="font-medium text-gray-500 cursor-pointer hover:text-gray-900"
+                  // href="#services"
+                  onClick={() => servicesScroll()}
                 >
                   Services
-                </a>
+                </p>
               </li>
               <li className="mr-12">
                 <a
