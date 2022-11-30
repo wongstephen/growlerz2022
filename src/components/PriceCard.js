@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export const PriceCard = ({
   mainPrice,
   mainPriceDesc,
@@ -41,6 +40,8 @@ export const PriceCard = ({
             <a
               className="inline-block w-full py-4 mb-4 text-base font-medium leading-6 text-center bg-teal-500 rounded-full shadow-lg px-7 md:text-lg text-teal-50 hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
               href={link}
+              target="_blank"
+              rel="noreferrer"
             >
               Get Started
             </a>
@@ -50,9 +51,16 @@ export const PriceCard = ({
           <>
             <div className="border-b border-gray-100"></div>
             <ul className="self-start px-8 pt-8">
-              <li className="flex items-center mb-3 font-medium text-gray-500">
-                <span>{subdescription}</span>
-              </li>
+              {subdescription.map((obj, idx) => {
+                return (
+                  <li
+                    className="flex items-center mb-3 font-medium text-gray-500"
+                    key={idx}
+                  >
+                    {obj}
+                  </li>
+                );
+              })}
             </ul>
           </>
         )}

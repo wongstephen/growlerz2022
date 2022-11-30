@@ -3,6 +3,14 @@ import { PriceCard } from "./PriceCard";
 import { PriceCardLoading } from "./PriceCardLoading";
 
 export const Pricing = ({ data }) => {
+  const placeholderImg = () => {
+    Array(4)
+      .fill("")
+      .map((obj, idx) => {
+        return <PriceCardLoading key={idx} />;
+      });
+  };
+
   return (
     <section
       id="pricing"
@@ -26,17 +34,17 @@ export const Pricing = ({ data }) => {
                 mainPrice={data.park_1_entry}
                 description={`One entry for one dog. Add additional dogs from the same
                 household for $${data.park_1_entry_addl} more per entry.`}
-                subdescription={"Puchase online or at the door"}
-                link="#"
+                subdescription={["Puchase at the door"]}
+                // link="#"
               />
               <PriceCard
                 title="Punch Card"
                 mainPrice={data.park_punch_card}
                 popular={true}
-                description={`11 entries for one dog. Add additional dogs from the same
+                description={`Get 11 entries for the price of 10, for one dog. Add additional dogs from the same
                 household for $${data.park_punch_card_addl} more.`}
-                subdescription={`Get 11 entries for the price of 10`}
-                link="#"
+                subdescription={[`Get 11 entries for the price of 10`]}
+                // link=""
               />
               <PriceCard
                 title="Membership"
@@ -44,28 +52,33 @@ export const Pricing = ({ data }) => {
                 mainPriceDesc="per month"
                 popular={false}
                 description={`Unlimited entries for one dog. Add additional dogs from
-                the same household for $${data.park_membership_monthly_addl} more per month.`}
-                subdescription={`Purchase a yearly membership for $${data.park_membership_yearly}. Each additional dog from the
-                same household is $${data.park_membership_yearly_addl} 
-                yearly.`}
-                link="#"
+                the same household for $${data.park_membership_monthly_addl} more per month. `}
+                subdescription={[
+                  `Purchase a yearly membership for $${data.park_membership_yearly}. Additional dog from the
+                same household is $${data.park_membership_yearly_addl}
+                yearly.`,
+                ]}
+                link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="Self-Wash Station"
                 mainPrice={data.dog_self_wash}
                 popular={false}
-                description={`Bring your dirty dog to Growlerz. The Self wash station is now open!.`}
-                subdescription="Bring and wash your dog during park hours except for
-                Wednesdays."
-                link=""
+                description={`Bring your dirty dog to Growlerz. The Self wash station is now open!`}
+                subdescription={[
+                  "Bring and wash your dog during park hours except for Wednesdays.",
+                  "Members get 12% off regular price",
+                ]}
+                // link=""
               />
             </>
           ) : (
             <>
-              <PriceCardLoading />
-              <PriceCardLoading />
-              <PriceCardLoading />
-              <PriceCardLoading />
+              {Array(4)
+                .fill("")
+                .map((obj, idx) => {
+                  return <PriceCardLoading key={idx} />;
+                })}
             </>
           )}
         </div>
@@ -90,45 +103,51 @@ export const Pricing = ({ data }) => {
               <PriceCard
                 title="Half Day"
                 mainPrice={`22`}
-                // mainPriceDesc="one dog"
-                description={`5 hours day care for one dog. Add additional dogs from the same household for $16 more.`}
-                subdescription={``}
-                link="#"
+                description={`5 hours day care for one dog.`}
+                subdescription={[
+                  "Additional dogs from the same household for $16 each",
+                ]}
+                link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="Single Day"
                 mainPrice={`38`}
-                // mainPriceDesc="one dog"
-                description={`Full day care for one dog. Add additional dogs from the same
-                household for $22 more.`}
-                subdescription={``}
-                link="#"
+                description={`Full day care for one dog. `}
+                subdescription={[
+                  `Additional dogs from the same household for $22 each.`,
+                ]}
+                link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="5 Days"
                 mainPrice={`180`}
                 popular={true}
-                // mainPriceDesc="one dog"
-                description={`Five entries for one dog. Add additional dogs from the same household for $85 more.`}
-                subdescription={`Save $10 over single day admissions`}
-                link="#"
+                description={`Five entries for one dog. `}
+                subdescription={[
+                  `Save $10 over single day admissions.`,
+                  "Add additional dogs from the same household for $85 more.",
+                ]}
+                link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="10 Days"
                 mainPrice={`350`}
                 popular={false}
-                // mainPriceDesc="one dog"
-                description={`Ten entries for one dog. Add additional dogs from the same household for $172.50 more.`}
-                subdescription={`Save $30 over single day admissions`}
-                link="#"
+                description={`Ten entries for one dog.`}
+                subdescription={[
+                  `Save $30 over single day admissions.`,
+                  "Additional dogs from the same household for $172.50 more.",
+                ]}
+                link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
             </>
           ) : (
             <>
-              <PriceCardLoading />
-              <PriceCardLoading />
-              <PriceCardLoading />
-              <PriceCardLoading />
+              {Array(4)
+                .fill("")
+                .map((obj, idx) => {
+                  return <PriceCardLoading key={idx} />;
+                })}
             </>
           )}
         </div>
