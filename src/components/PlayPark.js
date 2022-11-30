@@ -72,52 +72,55 @@ export const PlayPark = ({ playParkRef }) => {
           )}
         </div>
       </div>
-      {showDetails && (
-        <div className="w-11/12 mx-auto mb-8 text-lg font-normal leading-loose text-gray-500 md:text-xl md:leading-loose">
-          Patrons using the play park will be responsible for monitoring their
-          dog’s behavior and for cleaning up after their dog(s). Any aggressive
-          behavior or fighting will not be tolerated. First offense: all
-          involved dogs will be asked to be put on a leash. Second offense: dogs
-          will be asked to leave that day. Third offense, dogs will no longer be
-          allowed to access services. Payments for services will be forfeited
-          (at a pro-rated rate as applicable).
-          <p className="my-8 text-2xl font-medium text-center">Park Rules</p>
-          <div>
-            <ul>
-              {parkRules.parkrules.map((rule, idx) => (
-                <li className="mb-4" key={idx}>
-                  <span className="font-bold leading-loose upper">
-                    {rule.title}
-                  </span>{" "}
-                  <span className="font-normal">{rule.desc}</span>
-                </li>
-              ))}
-            </ul>
-            <div
-              className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer r md:text-xl md:leading-loose"
-              onClick={() => {
-                setShowDetails(!showDetails);
-                playParkRef.current.scrollIntoView({ behavior: "smooth" });
-              }}
+
+      <div
+        className={`w-11/12 mx-auto mb-8 text-lg font-normal leading-loose text-gray-500 md:text-xl md:leading-loose transition-all duration-1000 h-auto ${
+          !showDetails && "h-0 overflow-hidden"
+        }`}
+      >
+        Patrons using the play park will be responsible for monitoring their
+        dog’s behavior and for cleaning up after their dog(s). Any aggressive
+        behavior or fighting will not be tolerated. First offense: all involved
+        dogs will be asked to be put on a leash. Second offense: dogs will be
+        asked to leave that day. Third offense, dogs will no longer be allowed
+        to access services. Payments for services will be forfeited (at a
+        pro-rated rate as applicable).
+        <p className="my-8 text-2xl font-medium text-center">Park Rules</p>
+        <div>
+          <ul>
+            {parkRules.parkrules.map((rule, idx) => (
+              <li className="mb-4" key={idx}>
+                <span className="font-bold leading-loose upper">
+                  {rule.title}
+                </span>{" "}
+                <span className="font-normal">{rule.desc}</span>
+              </li>
+            ))}
+          </ul>
+          <div
+            className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer r md:text-xl md:leading-loose"
+            onClick={() => {
+              setShowDetails(!showDetails);
+              playParkRef.current.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-12 h-12 mx-auto"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-12 h-12 mx-auto"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
           </div>
         </div>
-      )}
+      </div>
     </section>
   );
 };

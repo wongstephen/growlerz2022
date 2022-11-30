@@ -3,7 +3,7 @@ import { useFetch } from "./hooks/useFetch";
 import { EventsCardLoading } from "./EventsCardLoading";
 
 export const Events = () => {
-  const postData = useFetch("posts");
+  const { data: postData } = useFetch("posts");
 
   return (
     <section
@@ -19,8 +19,8 @@ export const Events = () => {
             News and Events
           </h3>
         </div>
-        {postData.data ? (
-          postData.data.map((obj, idx) => (
+        {postData ? (
+          postData.map((obj, idx) => (
             <div
               className="flex flex-wrap justify-center max-w-5xl pt-12 -mx-4"
               key={idx}
