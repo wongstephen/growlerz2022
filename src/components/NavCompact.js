@@ -1,6 +1,7 @@
 import React from "react";
-
-export const NavCompact = ({ open, setOpen }) => {
+import { NavLinks } from "./NavLinks";
+import { navLinkData } from "./data/navLinkData";
+export const NavCompact = ({ open, setOpen, scrollTo }) => {
   const closeNav = () => {
     setOpen(false);
   };
@@ -28,57 +29,27 @@ export const NavCompact = ({ open, setOpen }) => {
               />
             </div>
             <ul className="py-6">
-              <li>
-                <a
-                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#services"
-                  onClick={closeNav}
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#pricing"
-                  onClick={closeNav}
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#events"
-                  onClick={closeNav}
-                >
-                  Events
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#faq"
-                  onClick={closeNav}
-                >
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a
-                  className="block px-4 py-3 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-gray-50"
-                  href="#contact"
-                  onClick={closeNav}
-                >
-                  Contact Us
-                </a>
-              </li>
+              {navLinkData.map((obj, idx) => {
+                return (
+                  <NavLinks
+                    scollFunc={scrollTo}
+                    closeNav={closeNav}
+                    name={obj.ref}
+                    compact={true}
+                    key={idx}
+                  >
+                    {obj.title}
+                  </NavLinks>
+                );
+              })}
             </ul>
             <div className="flex flex-col flex-wrap">
               <div className="mb-2">
                 <a
                   className="inline-block w-full px-4 py-2 text-sm font-medium leading-5 text-center text-gray-500 bg-transparent rounded-full shadow-lg hover:text-gray-900"
-                  href="#"
+                  href="https://growlerz.portal.gingrapp.com/#/public/login"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Log In
                 </a>
@@ -86,7 +57,9 @@ export const NavCompact = ({ open, setOpen }) => {
               <div className="">
                 <a
                   className="inline-block w-full px-4 py-2 text-sm font-medium leading-5 text-center text-white bg-teal-500 rounded-full shadow-lg hover:bg-teal-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
-                  href="#"
+                  href="https://growlerz.gingrapp.com/front_end/new_customer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Sign Up
                 </a>
@@ -95,8 +68,8 @@ export const NavCompact = ({ open, setOpen }) => {
           </div>
         </nav>
         {/* closeNav Button */}
-        <a
-          className="absolute p-4 top-5 right-3"
+        <button
+          className="absolute p-4 cursor-pointer top-5 right-3"
           href="#"
           onClick={closeNav}
           name="closeNavAction"
@@ -113,7 +86,7 @@ export const NavCompact = ({ open, setOpen }) => {
               fill="#556987"
             ></path>
           </svg>
-        </a>
+        </button>
       </div>
     </div>
   );

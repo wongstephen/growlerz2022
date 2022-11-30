@@ -14,7 +14,7 @@ export const Contact = () => {
               How to find us
             </h2>
 
-            <div className="text-lg font-light tracking-wider text-gray-500 md:text-xl">
+            <div className="text-lg font-light tracking-wider text-gray-500 md:text-xl [&>*]:my-4 my-12">
               <a
                 className="hover:text-gray-800"
                 href="mailto:growlerzseattle@gmail.com"
@@ -22,14 +22,11 @@ export const Contact = () => {
                 growlerzseattle@gmail.com
               </a>
               <p>(206) 459-2726</p>
-            </div>
-
-            <div className="my-6">
               <Social />
             </div>
             <div className="text-left">
-              <p className="text-lg font-light tracking-wider text-gray-500 md:text-xl">
-                5269 Rainier Ave. <br /> S Seattle WA, 98118
+              <p className="text-lg font-light tracking-wider text-center text-gray-500 md:text-xl">
+                5269 Rainier Ave. S Seattle WA, 98118
               </p>
               <img
                 className="w-11/12 max-w-2xl mx-auto my-4 border-2 border-teal-100 rounded-tl-3xl mx-right rounded-br-3xl"

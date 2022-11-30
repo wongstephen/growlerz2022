@@ -1,6 +1,8 @@
 import React from "react";
+import { NavLinks } from "./NavLinks";
+import { navLinkData } from "./data/navLinkData";
 
-export const NavFull = ({ setOpen, servicesScroll }) => {
+export const NavFull = ({ setOpen, scrollTo }) => {
   return (
     <div className="bg-transparent">
       <nav className="container flex justify-between p-6 px-6 mx-auto">
@@ -22,48 +24,14 @@ export const NavFull = ({ setOpen, servicesScroll }) => {
           </div>
 
           <div className="w-1/2 xl:w-1/3">
-            <ul className="hidden xl:flex xl:justify-center">
-              <li className="mr-12">
-                <p
-                  className="font-medium text-gray-500 cursor-pointer hover:text-gray-900"
-                  // href="#services"
-                  onClick={() => servicesScroll()}
-                >
-                  Services
-                </p>
-              </li>
-              <li className="mr-12">
-                <a
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                  href="#pricing"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li className="mr-12">
-                <a
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                  href="#events"
-                >
-                  Events
-                </a>
-              </li>
-              <li className="mr-12">
-                <a
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                  href="#faq"
-                >
-                  FAQ
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                  href="#contact"
-                >
-                  Contact
-                </a>
-              </li>
+            <ul className="hidden xl:flex xl:justify-center [&>*]:mr-12">
+              {navLinkData.map((obj, idx) => {
+                return (
+                  <NavLinks scollFunc={scrollTo} name={obj.ref} key={idx}>
+                    {obj.title}
+                  </NavLinks>
+                );
+              })}
             </ul>
           </div>
           <div className="w-1/2 xl:w-1/3">
@@ -88,7 +56,7 @@ export const NavFull = ({ setOpen, servicesScroll }) => {
           </div>
         </div>
         <button
-          className="self-center navbar-burger xl:hidden"
+          className="self-center rounded-full navbar-burger xl:hidden"
           onClick={() => setOpen(true)}
         >
           <svg

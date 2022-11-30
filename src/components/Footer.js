@@ -1,23 +1,22 @@
 import React from "react";
+import { NavLinks } from "./NavLinks";
 import { Social } from "./Social";
+import { navLinkData } from "./data/navLinkData";
 
-export const Footer = ({ data }) => {
+export const Footer = ({ data, scrollTo }) => {
   return (
     <section id="footer" className="mx-auto bg-trasnparent max-w-7xl">
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap pt-24 pb-12 -mx-4">
           <div className="w-full px-4 mb-16 md:w-1/2 lg:w-4/12 lg:mb-0">
-            <a
-              className="inline-flex items-center mb-4 text-2xl font-bold tracking-wider uppercase text-gray-9"
-              href="#"
-            >
+            <div className="inline-flex items-center mb-4 text-2xl font-bold tracking-wider uppercase text-gray-9">
               <img
                 className="h-8"
                 src={require("../assets/paw@100x.png")}
                 alt=""
               />
               <span className="ml-2">Growlerz</span>
-            </a>
+            </div>
             <p className="mb-6 text-base font-medium text-gray-500 md:text-lg lg:w-64">
               5269 Rainier Ave. S<br /> Seattle WA, 98118
             </p>
@@ -40,49 +39,22 @@ export const Footer = ({ data }) => {
           </div>
           <div className="w-full px-4 md:w-1/4 lg:w-2/12 md:mb-16 lg:mb-0">
             <h3 className="mb-5 text-lg font-bold text-gray-900">Links</h3>
-            <ul>
-              <li className="mb-4">
-                <a
-                  className="inline-block font-medium text-gray-500 hover:text-gray-600"
-                  href="#services"
-                >
-                  Services
-                </a>
-              </li>
-              <li className="mb-4">
-                <a
-                  className="inline-block font-medium text-gray-500 hover:text-gray-600"
-                  href="#pricing"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li className="mb-4">
-                <a
-                  className="inline-block font-medium text-gray-500 hover:text-gray-600"
-                  href="#events"
-                >
-                  Events
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="w-full px-4 mb-16 md:w-1/4 lg:w-2/12 lg:mb-0">
-            <ul className="md:mt-12">
-              <li className="mb-4">
-                <a
-                  className="font-medium text-gray-500 hover:text-gray-600"
-                  href="#faq"
-                >
-                  FAQ
-                </a>
-              </li>
+            <ul className="[&>*]:mb-2">
+              {navLinkData.map((obj, idx) => {
+                return (
+                  <NavLinks scollFunc={scrollTo} name={obj.ref} key={idx}>
+                    {obj.title}
+                  </NavLinks>
+                );
+              })}
+
               <div className="flex justify-start mt-6 text-center text-gray-500">
                 <Social />
               </div>
             </ul>
           </div>
-          <div className="w-full px-4 md:w-1/3 lg:w-4/12">
+          {/* Newsletter */}
+          {/* <div className="w-full px-4 md:w-1/3 lg:w-4/12">
             <h3 className="mb-5 text-lg font-bold text-gray-900">Newsletter</h3>
             <div className="flex flex-wrap">
               <div className="w-full py-1 lg:flex-1 lg:py-0 lg:mr-3">
@@ -100,7 +72,7 @@ export const Footer = ({ data }) => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="border-b border-gray-100"></div>
