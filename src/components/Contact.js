@@ -1,7 +1,7 @@
 import React from "react";
 import { Social } from "./Social";
 
-export const Contact = () => {
+const Contact = () => {
   return (
     <section className="max-w-5xl py-24 mx-auto bg-trasnparent" id="contact">
       <div className="container px-4 mx-auto">
@@ -40,3 +40,5 @@ export const Contact = () => {
     </section>
   );
 };
+
+export default Contact;

@@ -3,7 +3,7 @@ import { NavLinks } from "./NavLinks";
 import { Social } from "./Social";
 import { navLinkData } from "./data/navLinkData";
 
-export const Footer = ({ data, scrollTo }) => {
+const Footer = ({ data, scrollTo }) => {
   return (
     <section id="footer" className="mx-auto bg-trasnparent max-w-7xl">
       <div className="container px-4 mx-auto">
@@ -82,3 +82,5 @@ export const Footer = ({ data, scrollTo }) => {
     </section>
   );
 };
+
+export default Footer;

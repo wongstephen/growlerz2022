@@ -35,7 +35,7 @@ export const DayCare = ({ dayCareRef }) => {
         </div>
       </div>
       {showDetails && (
-        <div className="w-11/12 mx-auto mb-8 text-lg font-normal font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
+        <div className="w-11/12 mx-auto mb-8 text-lg font-normal leading-loose text-gray-500 md:text-xl md:leading-loose">
           <p className="mb-8">
             Growlerz, we make sure your furchild is taken care of properly. All
             of We all live busy lives and can't always be there for our dogs. At

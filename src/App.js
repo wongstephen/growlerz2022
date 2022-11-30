@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { lazy, useRef, useState } from "react";
 import "./App.css";
 import { useFetch } from "./components/hooks/useFetch";
 
@@ -9,13 +9,15 @@ import { Services } from "./components/Services";
 import { Faq } from "./components/Faq";
 import { Events } from "./components/Events";
 import { Pricing } from "./components/Pricing";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+// import { Contact } from "./components/Contact";
+// import { Footer } from "./components/Footer";
 import { ToTop } from "./components/ToTop";
+const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
   const [open, setOpen] = useState(false);
-  const pageData = useFetch("pages");
+  const { data: pageData } = useFetch("pages");
 
   const servicesRef = useRef();
   const pricingRef = useRef();
@@ -54,19 +56,11 @@ function App() {
         </header>
         <span ref={servicesRef}>
           <Services
-            data={
-              pageData.data &&
-              pageData.data.filter((obj) => obj.id === 145)[0]["acf"]
-            }
+            data={pageData?.filter((obj) => obj.id === 145)[0]["acf"]}
           />
         </span>
         <span ref={pricingRef}>
-          <Pricing
-            data={
-              pageData.data &&
-              pageData.data.filter((obj) => obj.id === 131)[0]["acf"]
-            }
-          />
+          <Pricing data={pageData?.filter((obj) => obj.id === 131)[0]["acf"]} />
         </span>
         <span ref={eventsRef}>
           <Events />
@@ -78,10 +72,7 @@ function App() {
           <Contact />
         </span>
         <Footer
-          data={
-            pageData.data &&
-            pageData.data.filter((obj) => obj.id === 145)[0]["acf"]
-          }
+          data={pageData?.filter((obj) => obj.id === 145)[0]["acf"]}
           scrollTo={scrollTo}
         />
         <ToTop />
