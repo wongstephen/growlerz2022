@@ -13,26 +13,27 @@ const Contact = () => {
             <h2 className="mb-6 text-3xl font-bold leading-snug tracking-tight text-gray-900 md:text-5xl lg:text-7xl md:leading-snug lg:leading-snug">
               How to find us
             </h2>
-
-            <div className="text-lg font-light tracking-wider text-gray-500 md:text-xl [&>*]:my-4 my-12">
-              <a
-                className="hover:text-gray-800"
-                href="mailto:growlerzseattle@gmail.com"
-              >
-                growlerzseattle@gmail.com
-              </a>
-              <p>(206) 459-2726</p>
-              <Social />
-            </div>
-            <div className="text-left">
-              <p className="text-lg font-light tracking-wider text-center text-gray-500 md:text-xl">
-                5269 Rainier Ave. S Seattle WA, 98118
-              </p>
-              <img
-                className="w-11/12 max-w-2xl mx-auto my-4 border-2 border-teal-100 rounded-tl-3xl mx-right rounded-br-3xl"
-                src={require("../assets/full-map.webp")}
-                alt=""
-              />
+            <div className="md:flex">
+              <div className="text-md font-light tracking-wider text-gray-500 md:text-lg [&>*]:mb-12 basis-1/2">
+                <a
+                  className="hover:text-gray-800"
+                  href="mailto:growlerzseattle@gmail.com"
+                >
+                  growlerzseattle@gmail.com
+                </a>
+                <p>(206) 459-2726</p>
+                <p className="">
+                  5269 Rainier Ave. S<br /> Seattle WA, 98118
+                </p>
+                <Social />
+              </div>
+              <div className="text-left basis-1/2">
+                <img
+                  className="w-11/12 max-w-lg mx-auto my-4 border-2 border-teal-100 rounded-tl-3xl mx-right rounded-br-3xl"
+                  src={require("../assets/full-map.webp")}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
