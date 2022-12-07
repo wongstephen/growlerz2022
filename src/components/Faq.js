@@ -84,9 +84,9 @@ export const Faq = () => {
           </div>
 
           <div className="flex flex-wrap max-w-4xl pt-12 -mx-4">
-            {faqs.map((faq) => {
+            {faqs.map((faq, idx) => {
               return (
-                <div className="w-full px-4 mb-4 md:w-1/2">
+                <div className="w-full px-4 mb-4 md:w-1/2" key={idx}>
                   <div className="h-full group">
                     <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-md shadow-md group group-hover:bg-trasnparent hover:shadow-xl">
                       <div className="absolute top-0 inline-flex items-center justify-center w-16 h-16 transition duration-200 transform -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 bg-trasnparent"></div>
