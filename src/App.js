@@ -1,6 +1,6 @@
 import { lazy, useRef, useState } from "react";
 import "./App.css";
-import { useFetch } from "./components/hooks/useFetch";
+import useFetchStrapi from "./components/hooks/useFetchStrapi";
 
 import { Welcome } from "./components/Welcome";
 import { NavCompact } from "./components/NavCompact";
@@ -9,18 +9,14 @@ import { Services } from "./components/Services";
 import { Faq } from "./components/Faq";
 import { Events } from "./components/Events";
 import { Pricing } from "./components/Pricing";
-// import { Contact } from "./components/Contact";
-// import { Footer } from "./components/Footer";
 import { ToTop } from "./components/ToTop";
-import useFetchStrapi from "./components/hooks/useFetchStrapi";
 const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
-// inport {useFetchStrapi}
 
 function App() {
   const [open, setOpen] = useState(false);
-  const { data: pageData } = useFetch("pages");
-  const { data: hours } = useFetchStrapi("business-hour/");
+  const { data: hourData } = useFetchStrapi("business-hour/");
+  const { data: priceData } = useFetchStrapi("price/");
 
   const servicesRef = useRef();
   const pricingRef = useRef();
@@ -58,10 +54,10 @@ function App() {
           <Welcome />
         </header>
         <span ref={servicesRef}>
-          <Services hours={hours} />
+          <Services hours={hourData} />
         </span>
         <span ref={pricingRef}>
-          <Pricing data={pageData?.filter((obj) => obj.id === 131)[0]["acf"]} />
+          <Pricing price={priceData} />
         </span>
         <span ref={eventsRef}>
           <Events />
@@ -72,7 +68,7 @@ function App() {
         <span ref={contactRef}>
           <Contact />
         </span>
-        <Footer hours={hours} scrollTo={scrollTo} />
+        <Footer hours={hourData} scrollTo={scrollTo} />
         <ToTop />
       </div>
     </div>

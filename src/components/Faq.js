@@ -3,18 +3,7 @@ import React from "react";
 const faqs = [
   {
     question: "Are Dog Vaccinations Required?",
-    content: `Proof of current DHPP, Rabies, and Bordetella vaccinations
-      is required prior to admission. While Bordetella vaccination
-      does not fully eliminate the chance of getting kennel cough,
-      it does help bolster their immunity to it. Please note there
-      are waiting times required with Bordatella vaccinations: For
-      first time Bordatella vaccination we require a 14 day
-      waiting period before allowing entry to the facility. If
-      your dog has received a re-vaccination for Bordatella, we
-      require a 24 hour wait before entry. Growlerz also requires
-      all dogs to be on flea prevention. All guests are
-      responsible for ensuring that their records are up to date.
-      For your convenience please create a profile 
+    content: `6.	Proof of current DHPP, Rabies, and Bordetella vaccinations is required prior to admission. While Bordetella vaccination does not fully eliminate the chance of getting kennel cough, it does help bolster their immunity to it. All guests are responsible for ensuring that their records are up to date. For your convenience please create a profile
         <a
           href="https://growlerz.gingrapp.com/front_end/new_customer"
           class="font-bold text-teal-500"
@@ -27,8 +16,15 @@ const faqs = [
   },
   {
     question: "How can I submit vaccination records?",
-    content:
-      "For your convenience, you can email them before you come to Growlerz! We will review them and send you a confirmation that your dog is approved for entry. This saves us form having to turn you away at the door if something isn’t correct or the vaccinations are incomplete. For the health of everyone’s dogs, we are very strict on the vaccination records.",
+    content: `For your convenience, you can email them before you come to Growlerz! We will review them and send you a confirmation that your dog is approved for entry. This saves us form having to turn you away at the door if something isn’t correct or the vaccinations are incomplete. For the health of everyone’s dogs, we are very strict on the vaccination records. For expediated entry, please create a profile and upload records 
+    <a
+      href="https://growlerz.gingrapp.com/front_end/new_customer"
+      class="font-bold text-teal-500"
+      target="_blank"
+      rel="noreferrer"
+    >
+      here
+    </a>`,
   },
   {
     question: "What about spaying and neutering?",
@@ -42,7 +38,7 @@ const faqs = [
   {
     question: "Who watches my dog in the play park?",
     content:
-      "AWhile using the play park, you are responsible for your dogs behavior and clean-up. There will be staff on duty and will help some in certain situations (it takes a village!) but they are not responsible for your dog. Dogs showing signs of aggression or escalating behavior may be asked to take a time out or leave.",
+      "While using the play park, you are responsible for your dogs behavior and clean-up. There will be staff on duty and will help some in certain situations (it takes a village!) but they are not responsible for your dog. Dogs showing signs of aggression or escalating behavior may be asked to take a time out or leave.",
   },
   {
     question: "Do you allow puppies?",

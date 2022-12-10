@@ -11,7 +11,6 @@ const useFetchStrapi = (path) => {
     axios
       .get(URL_API + path)
       .then((res) => {
-        console.log(res.data); //TODO: Delete later
         setData(res.data);
       })
       .catch((err) => {
