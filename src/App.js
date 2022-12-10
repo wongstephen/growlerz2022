@@ -10,6 +10,7 @@ import { Faq } from "./components/Faq";
 import { Events } from "./components/Events";
 import { Pricing } from "./components/Pricing";
 import { ToTop } from "./components/ToTop";
+import { Alert } from "./components/Alert";
 const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
 
@@ -17,6 +18,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const { data: hourData } = useFetchStrapi("business-hour/");
   const { data: priceData } = useFetchStrapi("price/");
+  const { data: alertData } = useFetchStrapi("alert/");
 
   const servicesRef = useRef();
   const pricingRef = useRef();
@@ -51,6 +53,7 @@ function App() {
         <header className="relative mx-auto overflow-hidden max-w-7xl">
           <NavFull setOpen={setOpen} open={open} scrollTo={scrollTo} />
           <NavCompact setOpen={setOpen} open={open} scrollTo={scrollTo} />
+          {alertData?.data && <Alert data={alertData.data} />}
           <Welcome />
         </header>
         <span ref={servicesRef}>

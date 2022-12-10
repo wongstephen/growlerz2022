@@ -20,16 +20,13 @@ export const Events = () => {
           <h3 className="mb-6 text-3xl font-bold leading-snug tracking-tight text-gray-900 md:text-5xl lg:text-7xl md:leading-snug lg:leading-snug">
             News and Events
           </h3>
-        </div>
-        {posts ? (
-          posts.data.map((post, idx) => (
-            <div
-              className="flex flex-wrap justify-center max-w-5xl pt-12 -mx-4"
-              key={idx}
-            >
-              <div className="w-full px-4 mb-4 md:max-w-prose">
+        </div>{" "}
+        <div className="flex flex-wrap w-full pt-12 -mx-4 justify-left">
+          {posts ? (
+            posts.data.map((post, idx) => (
+              <div className="w-1/2 px-4 mb-4 max-w-prose" key={idx}>
                 <div className="h-full group">
-                  <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-md shadow-md group group-hover:bg-trasnparent hover:shadow-xl">
+                  <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-sm shadow-sm hover:shadow-md">
                     <h3 className="mb-4 text-xl font-bold leading-7 text-gray-900">
                       {post.attributes.Title}
                     </h3>
@@ -53,17 +50,17 @@ export const Events = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <>
-            {Array(3)
-              .fill("")
-              .map((obj, idx) => (
-                <EventsCardLoading key={idx} />
-              ))}
-          </>
-        )}
+            ))
+          ) : (
+            <>
+              {Array(3)
+                .fill("")
+                .map((obj, idx) => (
+                  <EventsCardLoading key={idx} />
+                ))}
+            </>
+          )}
+        </div>
       </div>
     </section>
   );

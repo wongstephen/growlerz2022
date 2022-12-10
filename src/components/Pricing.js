@@ -24,8 +24,7 @@ export const Pricing = ({ price }) => {
               <PriceCard
                 title="Single Entry"
                 mainPrice={price.data.attributes.park_single}
-                description={`One entry for one dog. Add additional dogs from the same
-                household for $${price.data.attributes.park_single_add} more per entry.`}
+                description={`Entry for one dog. Discounted pricing for additional dogs from the same household.`}
                 subdescription={["Puchase at the door"]}
                 // link="#"
               />
@@ -33,8 +32,7 @@ export const Pricing = ({ price }) => {
                 title="Punch Card"
                 mainPrice={price.data.attributes.park_punch}
                 popular={true}
-                description={`Get 11 entries for the price of 10, for one dog. Add additional dogs from the same
-                household for $${price.data.attributes.park_punch_add} more.`}
+                description={`Get 11 entries for the price of 10, for one dog. Discounted pricing for additional dogs from the same household.`}
                 subdescription={[`Purchase online or at the door.`]}
                 // link=""
               />
@@ -43,12 +41,9 @@ export const Pricing = ({ price }) => {
                 mainPrice={price.data.attributes.park_monthly}
                 mainPriceDesc="per month"
                 popular={false}
-                description={`Unlimited entries for one dog. Add additional dogs from
-                the same household for $${price.data.attributes.park_monthly_add} more per month. `}
+                description={`Unlimited entries for one dog. Discounted pricing for additional dogs from the same household. `}
                 subdescription={[
-                  `Purchase a yearly membership for $${price.data.attributes.park_yearly}. Additional dog from the
-                same household is $${price.data.attributes.park_yearly_add}
-                yearly.`,
+                  `Yearly membership for one dog available for $${price.data.attributes.park_yearly}. Discounted pricing for additional dogs from the same household.`,
                 ]}
                 link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
@@ -58,8 +53,8 @@ export const Pricing = ({ price }) => {
                 popular={false}
                 description={`Bring your dirty dog to Growlerz. The Self wash station is now open!`}
                 subdescription={[
-                  "Bring and wash your dog during park hours except for Wednesdays.",
-                  "Members get 12% off regular price",
+                  "Open during dog park hours except for Wednesdays",
+                  "Members get an additional 12% off regular price",
                 ]}
                 // link=""
               />

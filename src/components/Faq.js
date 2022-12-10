@@ -3,7 +3,7 @@ import React from "react";
 const faqs = [
   {
     question: "Are Dog Vaccinations Required?",
-    content: `6.	Proof of current DHPP, Rabies, and Bordetella vaccinations is required prior to admission. While Bordetella vaccination does not fully eliminate the chance of getting kennel cough, it does help bolster their immunity to it. All guests are responsible for ensuring that their records are up to date. For your convenience please create a profile
+    content: `Proof of current DHPP, Rabies, and Bordetella vaccinations is required prior to admission. While Bordetella vaccination does not fully eliminate the chance of getting kennel cough, it does help bolster their immunity to it. All guests are responsible for ensuring that their records are up to date. For your convenience please create a profile
         <a
           href="https://growlerz.gingrapp.com/front_end/new_customer"
           class="font-bold text-teal-500"
@@ -67,7 +67,7 @@ export const Faq = () => {
       {/* FAQ */}
       <section
         id="faq"
-        className="max-w-5xl py-24 mx-auto md:pt-32 bg-trasnparent"
+        className="max-w-5xl py-24 mx-auto bg-transparent md:pt-32"
       >
         <div className="container px-4 mx-auto">
           <div className="text-left">
@@ -84,7 +84,7 @@ export const Faq = () => {
               return (
                 <div className="w-full px-4 mb-4 md:w-1/2" key={idx}>
                   <div className="h-full group">
-                    <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-md shadow-md group group-hover:bg-trasnparent hover:shadow-xl">
+                    <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-md shadow:sm hover:shadow-md">
                       <div className="absolute top-0 inline-flex items-center justify-center w-16 h-16 transition duration-200 transform -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 bg-trasnparent"></div>
                       <h3 className="max-w-xs mb-4 text-xl font-bold leading-7 text-gray-900">
                         {faq.question}
