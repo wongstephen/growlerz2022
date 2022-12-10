@@ -2,8 +2,10 @@ import React from "react";
 import { NavLinks } from "./NavLinks";
 import { Social } from "./Social";
 import { navLinkData } from "./data/navLinkData";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
-const Footer = ({ data, scrollTo }) => {
+const Footer = ({ hours, scrollTo }) => {
   return (
     <section id="footer" className="mx-auto bg-trasnparent max-w-7xl">
       <div className="container px-4 mx-auto">
@@ -22,17 +24,23 @@ const Footer = ({ data, scrollTo }) => {
             </p>
             <div className="text-base text-gray-500 font-md lg:w-64">
               <p>Park Hours</p>
-              {data && (
-                <div className="mb-8 text-sm leading-tight text-gray-600 whitespace-pre-line md:leading-normal ">
-                  {data.park_hours}
-                </div>
+              {hours && (
+                <ReactMarkdown
+                  className="mb-8 text-sm leading-tight text-gray-600 whitespace-pre-line md:leading-normal"
+                  rehypePlugins={[rehypeRaw]}
+                  children={hours.data.attributes.Park}
+                />
               )}
             </div>
             <div className="text-base text-gray-500 font-md lg:w-64">
               <p>Daycare Hours</p>
-              {data && (
+              {hours && (
                 <div className="mb-8 text-sm leading-tight text-gray-600 whitespace-pre-line md:leading-normal ">
-                  {data.daycare_hours}
+                  <ReactMarkdown
+                    className="mb-8 text-sm leading-tight text-gray-600 whitespace-pre-line md:leading-normal"
+                    rehypePlugins={[rehypeRaw]}
+                    children={hours.data.attributes.Daycare}
+                  />
                 </div>
               )}
             </div>

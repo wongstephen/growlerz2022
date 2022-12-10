@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import { DayCare } from "./DayCare";
 import { PlayPark } from "./PlayPark";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
-export const Services = ({ data, servicesRef }) => {
+export const Services = ({ data, hours, servicesRef }) => {
   const playParkRef = useRef();
   const dayCareRef = useRef();
 
@@ -25,10 +27,12 @@ export const Services = ({ data, servicesRef }) => {
             <p className="inline-block mb-4 text-xl text-gray-800 uppercase font-semibold tracking-[.2rem]">
               Play Park
             </p>
-            {data && (
-              <div className="mb-8 text-sm font-medium leading-tight text-gray-800 whitespace-pre-line md:text-base md:leading-normal ">
-                {data.park_hours}
-              </div>
+            {hours && (
+              <ReactMarkdown
+                className="mb-8 text-sm font-medium leading-tight text-gray-800 whitespace-pre-line md:text-base md:leading-normal"
+                rehypePlugins={[rehypeRaw]}
+                children={hours.data.attributes.Park}
+              />
             )}
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
               Looking for a fun and convenient way to exercise your dog? Our
@@ -42,10 +46,12 @@ export const Services = ({ data, servicesRef }) => {
             <p className="inline-block mb-4 text-xl text-gray-800 uppercase font-semibold tracking-[.2rem]">
               Day Care
             </p>
-            {data && (
-              <div className="mb-8 text-sm font-medium leading-tight text-gray-800 whitespace-pre-line md:text-base md:leading-normal ">
-                {data.daycare_hours}
-              </div>
+            {hours && (
+              <ReactMarkdown
+                className="mb-8 text-sm font-medium leading-tight text-gray-800 whitespace-pre-line md:text-base md:leading-normal"
+                rehypePlugins={[rehypeRaw]}
+                children={hours.data.attributes.Daycare}
+              />
             )}
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
               The perfect solution for busy pet parents! We offer a safe, fun,

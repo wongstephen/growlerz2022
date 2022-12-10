@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-const URL_API = "http://localhost:1337/api/";
+const URL_API = process.env.REACT_APP_STRAPI;
 
-export const useFetch = (path) => {
+const useFetchStrapi = (path) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState(null);
@@ -11,7 +11,7 @@ export const useFetch = (path) => {
     axios
       .get(URL_API + path)
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data); //TODO: Delete later
         setData(res.data);
       })
       .catch((err) => {
@@ -21,3 +21,5 @@ export const useFetch = (path) => {
   }, [path]);
   return { data, loading, err };
 };
+
+export default useFetchStrapi;

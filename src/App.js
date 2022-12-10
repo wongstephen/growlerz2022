@@ -12,12 +12,15 @@ import { Pricing } from "./components/Pricing";
 // import { Contact } from "./components/Contact";
 // import { Footer } from "./components/Footer";
 import { ToTop } from "./components/ToTop";
+import useFetchStrapi from "./components/hooks/useFetchStrapi";
 const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
+// inport {useFetchStrapi}
 
 function App() {
   const [open, setOpen] = useState(false);
   const { data: pageData } = useFetch("pages");
+  const { data: hours } = useFetchStrapi("business-hour/");
 
   const servicesRef = useRef();
   const pricingRef = useRef();
@@ -55,9 +58,7 @@ function App() {
           <Welcome />
         </header>
         <span ref={servicesRef}>
-          <Services
-            data={pageData?.filter((obj) => obj.id === 145)[0]["acf"]}
-          />
+          <Services hours={hours} />
         </span>
         <span ref={pricingRef}>
           <Pricing data={pageData?.filter((obj) => obj.id === 131)[0]["acf"]} />
@@ -71,10 +72,7 @@ function App() {
         <span ref={contactRef}>
           <Contact />
         </span>
-        <Footer
-          data={pageData?.filter((obj) => obj.id === 145)[0]["acf"]}
-          scrollTo={scrollTo}
-        />
+        <Footer hours={hours} scrollTo={scrollTo} />
         <ToTop />
       </div>
     </div>
