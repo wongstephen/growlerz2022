@@ -34,7 +34,7 @@ export const Events = () => {
                       {post.attributes.Title}
                     </h3>
                     <ReactMarkdown
-                      className="font-medium text-gray-500 transition duration-200 group-hover:text-gray-600"
+                      className="mb-12 font-medium text-gray-500 transition duration-200 group-hover:text-gray-600"
                       rehypePlugins={[rehypeRaw]}
                       children={post.attributes.Body}
                       linkTarget={"_blank"}
