@@ -25,8 +25,8 @@ export const Events = () => {
           {posts ? (
             posts.data.map((post, idx) => (
               <div
-                className={`w-1/2 px-4 mb-4 ${
-                  posts.data.length % 2 !== 0 && "first:w-full"
+                className={`w-full md:w-1/2 px-4 mb-4 ${
+                  posts.data.length % 2 !== 0 && "md:first:w-full"
                 }`}
                 key={idx}
               >
