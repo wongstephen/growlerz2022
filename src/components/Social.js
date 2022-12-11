@@ -2,7 +2,7 @@ import React from "react";
 
 export const Social = () => {
   return (
-    <div className="flex justify-start mt-6 text-center text-gray-500">
+    <div className="flex justify-start mt-6 text-center text-gray-700 ">
       {/* Facebook */}
       <a
         href="https://www.facebook.com/growlerzseattle/"
@@ -10,7 +10,7 @@ export const Social = () => {
         rel="noreferrer"
       >
         <svg
-          className="w-6 h-auto mr-4 hover:text-teal-500"
+          className="w-6 h-auto mr-4 hover:hover:text-gray-900"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
@@ -29,7 +29,7 @@ export const Social = () => {
         rel="noreferrer"
       >
         <svg
-          className="w-6 h-auto mr-4 hover:text-teal-500"
+          className="w-6 h-auto mr-4 hover:hover:text-gray-900"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
@@ -49,7 +49,7 @@ export const Social = () => {
         rel="noreferrer"
       >
         <svg
-          className="w-6 h-auto mr-4 hover:text-teal-500"
+          className="w-6 h-auto mr-4 hover:hover:text-gray-900"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -69,7 +69,7 @@ export const Social = () => {
           rel="noreferrer"
         >
           <svg
-            className="w-6 h-auto mr-4 hover:text-teal-500"
+            className="w-6 h-auto mr-4 hover:hover:text-gray-900"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"

@@ -11,10 +11,10 @@ export const PriceCard = ({
 }) => {
   return (
     <div className="w-full p-4 md:w-1/2">
-      <div className="flex flex-col pt-8 pb-8 transition duration-500 bg-white rounded-md shadow-md hover:scale-105">
-        <div className="px-8 pb-8">
+      <div className="flex flex-col h-full pt-8 pb-8 transition duration-500 bg-white rounded-md shadow-sm hover:shadow-md">
+        <div className="px-8 pb-8 ">
           <div className="flex flex-wrap items-center justify-between mb-6">
-            <h3 className="mr-3 text-lg font-medium text-gray-800 md:text-xl">
+            <h3 className="mr-3 text-lg font-medium text-gray-900 md:text-xl">
               {title}
             </h3>
             {popular && (
@@ -30,11 +30,11 @@ export const PriceCard = ({
             <span className="text-6xl font-semibold text-gray-900 md:text-7xl">
               {mainPrice}
             </span>
-            <span className="inline-block ml-1 font-semibold text-gray-500">
+            <span className="inline-block ml-1 font-semibold text-gray-700">
               {mainPriceDesc}
             </span>
           </div>
-          <p className="mb-6 font-medium text-gray-400">{description}</p>
+          <p className="mb-6 font-medium text-gray-700">{description}</p>
 
           {link && (
             <a
@@ -47,7 +47,7 @@ export const PriceCard = ({
             </a>
           )}
         </div>
-        {subdescription && (
+        {/* {subdescription && (
           <>
             <div className="border-b border-gray-100"></div>
             <ul className="self-start px-8 pt-8">
@@ -63,7 +63,7 @@ export const PriceCard = ({
               })}
             </ul>
           </>
-        )}
+        )} */}
       </div>
     </div>
   );

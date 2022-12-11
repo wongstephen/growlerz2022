@@ -14,7 +14,7 @@ const Contact = () => {
               How to find us
             </h2>
             <div className="md:flex">
-              <div className="text-md font-light tracking-wider text-gray-500 md:text-lg [&>*]:mb-12 basis-1/2">
+              <div className="text-md font-base tracking-wider text-gray-700 md:text-lg [&>*]:mb-12 basis-1/2">
                 <a
                   className="hover:text-gray-800"
                   href="mailto:growlerzseattle@gmail.com"

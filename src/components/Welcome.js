@@ -25,10 +25,10 @@ export const Welcome = () => {
                 5269 Rainier Ave. S, Seattle, WA
               </span>
             </p>
-            <img
+            {/* <img
               src={require("../assets/welcome-map.webp")}
               alt="Map of growlerz"
-            />
+            /> */}
           </div>
           <div className="w-full px-4 mb-12 md:w-1/2 md:mb-0">
             <div className="relative mx-auto max-w-max md:ml-auto md:mr-0 ">

@@ -90,7 +90,7 @@ export const Faq = () => {
                         {faq.question}
                       </h3>
                       <p
-                        className="font-medium text-gray-500 transition duration-200 group-hover:text-gray-600"
+                        className="font-medium text-gray-600 transition duration-200 group-hover:text-gray-700"
                         dangerouslySetInnerHTML={{ __html: faq.content }}
                       ></p>
                     </div>

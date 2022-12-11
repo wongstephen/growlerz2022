@@ -19,10 +19,10 @@ const Footer = ({ hours, scrollTo }) => {
               />
               <span className="ml-2">Growlerz</span>
             </div>
-            <p className="mb-6 text-base font-medium text-gray-500 md:text-lg lg:w-64">
+            <p className="mb-6 text-base font-medium text-gray-700 md:text-lg lg:w-64">
               5269 Rainier Ave. S<br /> Seattle WA, 98118
             </p>
-            <div className="text-base text-gray-500 font-md lg:w-64">
+            <div className="font-medium gray-700 text- font-md lg:w-64">
               <p>Park Hours</p>
               {hours && (
                 <ReactMarkdown
@@ -32,7 +32,7 @@ const Footer = ({ hours, scrollTo }) => {
                 />
               )}
             </div>
-            <div className="text-base text-gray-500 font-md lg:w-64">
+            <div className="font-medium gray-700 text- font-md lg:w-64">
               <p>Daycare Hours</p>
               {hours && (
                 <div className="mb-8 text-sm leading-tight text-gray-600 whitespace-pre-line md:leading-normal ">

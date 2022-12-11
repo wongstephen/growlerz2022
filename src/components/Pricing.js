@@ -41,21 +41,16 @@ export const Pricing = ({ price }) => {
                 mainPrice={price.data.attributes.park_monthly}
                 mainPriceDesc="per month"
                 popular={false}
-                description={`Unlimited entries for one dog. Discounted pricing for additional dogs from the same household. `}
-                subdescription={[
-                  `Yearly membership for one dog available for $${price.data.attributes.park_yearly}. Discounted pricing for additional dogs from the same household.`,
-                ]}
+                description={`Unlimited entries for one dog. Also available, yearly membership for one dog available for $${price.data.attributes.park_yearly}. Discounted pricing for additional dogs from the same household.`}
+                subdescription={[``]}
                 link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="Self-Wash Station"
                 mainPrice={price.data.attributes.park_self_wash}
                 popular={false}
-                description={`Bring your dirty dog to Growlerz. The Self wash station is now open!`}
-                subdescription={[
-                  "Open during dog park hours except for Wednesdays",
-                  "Members get an additional 12% off regular price",
-                ]}
+                description={`Bring your dirty dog to Growlerz. The Self wash station is now open! Open during dog park hours except for Wednesdays. Members get an additional 12% off regular price`}
+                // subdescription={[]}
                 // link=""
               />
             </>
@@ -77,7 +72,7 @@ export const Pricing = ({ price }) => {
           <h3 className="mb-6 text-3xl font-bold leading-snug tracking-tight text-gray-900 md:text-5xl lg:text-7xl md:leading-snug lg:leading-snug">
             Day Care
           </h3>
-          <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
+          <p className="mb-8 text-lg font-medium leading-loose text-gray-700 md:text-xl md:leading-loose">
             Multi-day passes may be redeemed on non-consecutive days. Day Care
             bundles never expire. 5% discount on Dog Daycare with any Play Park
             membership. Online reservations are highly encouraged as drop-ins
@@ -107,16 +102,16 @@ export const Pricing = ({ price }) => {
                 title="5 Days"
                 mainPrice={price.data.attributes.daycare_fiveDays}
                 popular={true}
-                description={`Five entries for one dog. `}
-                subdescription={[`Save $10 over single day admissions.`]}
+                description={`Five entries for one dog. Save $10 over regular single day admissions.`}
+                subdescription={[]}
                 link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="10 Days"
                 mainPrice={price.data.attributes.daycare_tenDays}
                 popular={false}
-                description={`Ten entries for one dog.`}
-                subdescription={[`Save $30 over single day admissions.`]}
+                description={`Ten entries for one dog. Save $30 over regular single day admissions.`}
+                subdescription={[]}
                 link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
             </>
