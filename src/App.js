@@ -11,8 +11,8 @@ import { Events } from "./components/Events";
 import { Pricing } from "./components/Pricing";
 import { ToTop } from "./components/ToTop";
 import { Alert } from "./components/Alert";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [open, setOpen] = useState(false);
