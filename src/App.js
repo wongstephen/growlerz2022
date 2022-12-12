@@ -20,6 +20,7 @@ function App() {
   const { data: priceData } = useFetchStrapi("price/");
   const { data: alertData } = useFetchStrapi("alert/");
 
+  // Refs for each section.
   const servicesRef = useRef();
   const pricingRef = useRef();
   const eventsRef = useRef();
@@ -49,31 +50,31 @@ function App() {
 
   return (
     <div className="antialiased bg-body text-body font-body bg">
-      <div className="">
-        <header className="relative mx-auto overflow-hidden max-w-7xl">
-          <NavFull setOpen={setOpen} open={open} scrollTo={scrollTo} />
-          <NavCompact setOpen={setOpen} open={open} scrollTo={scrollTo} />
-          {alertData?.data && <Alert data={alertData.data} />}
-          <Welcome />
-        </header>
-        <span ref={servicesRef}>
-          <Services hours={hourData} />
-        </span>
-        <span ref={pricingRef}>
-          <Pricing price={priceData} />
-        </span>
-        <span ref={eventsRef}>
-          <Events />
-        </span>
-        <span ref={faqRef}>
-          <Faq />
-        </span>
-        <span ref={contactRef}>
-          <Contact />
-        </span>
-        <Footer hours={hourData} scrollTo={scrollTo} />
-        <ToTop />
-      </div>
+      {/* <div className=""> */}
+      <header className="relative mx-auto overflow-hidden max-w-7xl">
+        <NavFull setOpen={setOpen} open={open} scrollTo={scrollTo} />
+        <NavCompact setOpen={setOpen} open={open} scrollTo={scrollTo} />
+        {alertData?.data && <Alert data={alertData.data} />}
+        <Welcome />
+      </header>
+      <span ref={servicesRef}>
+        <Services hours={hourData} />
+      </span>
+      <span ref={pricingRef}>
+        <Pricing price={priceData} />
+      </span>
+      <span ref={eventsRef}>
+        <Events />
+      </span>
+      <span ref={faqRef}>
+        <Faq />
+      </span>
+      <span ref={contactRef}>
+        <Contact />
+      </span>
+      <Footer hours={hourData} scrollTo={scrollTo} />
+      <ToTop />
+      {/* </div> */}
     </div>
   );
 }
