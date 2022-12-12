@@ -34,7 +34,7 @@ export const Welcome = () => {
             <div className="relative mx-auto max-w-max md:ml-auto md:mr-0 ">
               <img
                 className="m-auto rounded-tl-3xl rounded-br-3xl w-80 h-auto md:w-80 md:h-80 lg:w-96 lg:h-auto xl:w-[32rem] xl:h-auto border-2 border-teal-100 my-0"
-                src={require("../assets/welcome.webp")}
+                src={require("../assets/welcome-hero.jpg")}
                 alt="Two dogs"
               />
             </div>
