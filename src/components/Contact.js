@@ -3,7 +3,7 @@ import { Social } from "./Social";
 
 const Contact = () => {
   return (
-    <section className="max-w-5xl py-24 mx-auto bg-trasnparent" id="contact">
+    <div className="max-w-5xl py-24 mx-auto bg-trasnparent" id="contact">
       <div className="container px-4 mx-auto">
         <div className="relative mx-auto mb-12 text-left">
           <div className="relative">
@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -11,8 +11,8 @@ import { Events } from "./components/Events";
 import { Pricing } from "./components/Pricing";
 import { ToTop } from "./components/ToTop";
 import { Alert } from "./components/Alert";
-const Contact = lazy(() => import("./components/Contact"));
-const Footer = lazy(() => import("./components/Footer"));
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -50,31 +50,33 @@ function App() {
 
   return (
     <div className="antialiased bg-body text-body font-body bg">
-      {/* <div className=""> */}
       <header className="relative mx-auto overflow-hidden max-w-7xl">
         <NavFull setOpen={setOpen} open={open} scrollTo={scrollTo} />
         <NavCompact setOpen={setOpen} open={open} scrollTo={scrollTo} />
         {alertData?.data && <Alert data={alertData.data} />}
         <Welcome />
       </header>
-      <span ref={servicesRef}>
-        <Services hours={hourData} />
-      </span>
-      <span ref={pricingRef}>
-        <Pricing price={priceData} />
-      </span>
-      <span ref={eventsRef}>
-        <Events />
-      </span>
-      <span ref={faqRef}>
-        <Faq />
-      </span>
-      <span ref={contactRef}>
-        <Contact />
-      </span>
-      <Footer hours={hourData} scrollTo={scrollTo} />
+      <main>
+        <span ref={servicesRef}>
+          <Services hours={hourData} />
+        </span>
+        <span ref={pricingRef}>
+          <Pricing price={priceData} />
+        </span>
+        <span ref={eventsRef}>
+          <Events />
+        </span>
+        <span ref={faqRef}>
+          <Faq />
+        </span>
+        <span ref={contactRef}>
+          <Contact />
+        </span>
+      </main>
+      <footer>
+        <Footer hours={hourData} scrollTo={scrollTo} />
+      </footer>
       <ToTop />
-      {/* </div> */}
     </div>
   );
 }
