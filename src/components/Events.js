@@ -45,7 +45,7 @@ export const Events = () => {
                       <img
                         className="w-full h-auto max-w-xs mx-auto"
                         src={
-                          process.env.REACT_APP_HOST +
+                          process.env.REACT_APP_POSTMEDIA +
                           post.attributes.Media.data.attributes.formats.small
                             .url
                         }
