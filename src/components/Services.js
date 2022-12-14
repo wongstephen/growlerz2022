@@ -35,9 +35,11 @@ export const Services = ({ data, hours, servicesRef }) => {
               />
             )}
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
-              Looking for a fun and convenient way to exercise your dog? Our
-              dog-friendly park is the perfect place to bring your furry friend
-              for a good run around. Ask about our new dog self-wash station!
+              Our dog-friendly park is the perfect place to bring your furry
+              friend for a good run around. And now, we're excited to announce
+              the opening of our new dog self-wash station! So after a fun day
+              at the park, your dog can get cleaned up and ready for the ride
+              home.
             </p>
             <PlayPark playParkRef={playParkRef} />
           </div>
@@ -54,11 +56,12 @@ export const Services = ({ data, hours, servicesRef }) => {
               />
             )}
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
-              The perfect solution for busy pet parents! We offer a safe, fun,
-              and stimulating environment for your dog to enjoy while you are
-              away at work or running errands. Our experienced and loving staff
-              will take great care of your furry family member, providing plenty
-              of exercise, socialization, and TLC.
+              Looking for a safe and fun place for your dog to play while you're
+              busy? Growlerz Seattle dog park is the perfect solution for busy
+              pet parents! Our experienced and loving staff will provide your
+              furry family member with plenty of exercise, socialization, and
+              TLC in a stimulating environment. Your dog will have a great time
+              and you can have peace of mind knowing they're in good hands.
             </p>
             <DayCare dayCareRef={dayCareRef} />
           </div>
@@ -68,11 +71,12 @@ export const Services = ({ data, hours, servicesRef }) => {
               Taproom
             </p>
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
-              Growlerz Taproom is a cheerful, social spot for people to come and
-              have a drink. The space is open to the patrons with or without
-              accomanying a dog. It includes 8 craft beers on tap and plenty of
-              seating. You can stay for hours or just stop by for one drink.
-              Open during Play Park hours.
+              Growlerz Taproom is a social place where you can enjoy a drink
+              with or without your dog. Our taproom features 8 craft beers on
+              tap and plenty of seating, so you can stay for hours or just stop
+              by for a quick drink. And because our taproom is open during Play
+              Park hours, you can easily combine a visit to the park with a trip
+              to the taproom.
             </p>
           </div>
         </div>

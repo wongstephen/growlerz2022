@@ -12,13 +12,12 @@ export const Welcome = () => {
             <h1 className="mb-6 text-3xl font-bold leading-snug tracking-widest text-gray-900 md:text-5xl lg:text-7xl md:leading-snug lg:leading-snug">
               DOGS. BEER. COMMUNITY.
             </h1>
-            <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
-              The owners and staff here at Growlerz are dog lovers first and
-              foremost. We believe that time spent with a dog can brighten your
-              day, improve your mood, and reduce your stress.
+            <p className="mb-8 text-lg font-medium leading-loose text-gray-700 md:text-4xl md:leading-loose">
+              The Ultimate Dog Park Experience - Beers on Tap, and Fun for Your
+              Pup!
             </p>
 
-            <p className="mb-8 text-lg font-normal leading-loose text-gray-500 md:text-xl md:leading-loose">
+            <p className="mb-8 text-lg font-normal leading-loose text-gray-500 md:text-2xl md:leading-loose">
               We're conveniently located in the heart of the Columbia City
               Neighborhood at{" "}
               <span className="text-teal-500">

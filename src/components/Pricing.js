@@ -49,7 +49,7 @@ export const Pricing = ({ price }) => {
                 title="Self-Wash Station"
                 mainPrice={price.data.attributes.park_self_wash}
                 popular={false}
-                description={`Bring your dirty dog to Growlerz. The Self wash station is now open! Open during dog park hours except for Wednesdays. Members get an additional 12% off regular price`}
+                description={`If you have a dirty dog, bring them to Growlerz and take advantage of our new self-wash station! Our station is open during dog park hours, except for Wednesdays. Plus, if you're a member, you'll get an additional 12% off the regular price.`}
                 // subdescription={[]}
                 // link=""
               />
@@ -73,12 +73,16 @@ export const Pricing = ({ price }) => {
             Day Care
           </h3>
           <p className="mb-8 text-lg font-medium leading-loose text-gray-700 md:text-xl md:leading-loose">
-            Multi-day passes may be redeemed on non-consecutive days. Day Care
-            bundles never expire. 5% discount on Dog Daycare with any Play Park
-            membership. Online reservations are highly encouraged as drop-ins
-            have very limited availability. Dog daycare discount valid on full
-            day and full day packages only. Ask about discounted pricing
-            available for additional dogs from the same household.
+            Looking for a flexible and convenient way to enjoy the park with
+            your dog? Consider purchasing a multi-day pass! Our multi-day passes
+            may be redeemed on non-consecutive days, so you can come and go as
+            your schedule allows. And with our Dog Daycare bundles, you never
+            have to worry about expiration dates. Plus, if you're a Play Park
+            member, you'll get a 5% discount on Dog Daycare. To make sure you
+            get the best experience, we highly encourage online reservations.
+            Drop-ins are welcome, but availability is limited. And don't forget
+            to ask about our discounted pricing for additional dogs from the
+            same household.
           </p>
         </div>
         <div className="flex flex-wrap justify-center -mx-4">
