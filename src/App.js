@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import useFetchStrapi from "./components/hooks/useFetchStrapi";
 import "./App.css";
 
 import { Welcome } from "./components/Welcome";
@@ -72,7 +71,7 @@ function App() {
           <Pricing price={gqlData?.price?.data?.attributes} />
         </span>
         <span ref={eventsRef}>
-          <Events />
+          <Events posts={gqlData?.posts?.data} />
         </span>
         <span ref={faqRef}>
           <Faq />

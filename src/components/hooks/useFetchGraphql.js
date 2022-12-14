@@ -7,47 +7,64 @@ const useFetchGraphql = () => {
   const [error, setError] = React.useState(null);
 
   let DATA_QUERY = `query getData {
-        alert {
-            data {
-                attributes {
-                    Title
-                    Body
-                }
+    alert {
+        data {
+            attributes {
+                Title
+                Body
             }
         }
-        businessHour {
-            data {
-                id
-                attributes {
-                    Daycare
-                    Park
-                }
+    }
+    businessHour {
+        data {
+            id
+            attributes {
+                Daycare
+                Park
             }
         }
-        price {
-            data {
-                id
-                attributes {
-                    daycare_day
-                    daycare_day_add
-                    daycare_fiveDays
-                    daycare_fiveDays_add
-                    daycare_halfDay
-                    daycare_halfDay_add
-                    daycare_tenDays
-                    daycare_tenDays_add
-                    park_single
-                    park_single_add
-                    park_punch
-                    park_monthly
-                    park_monthly_add
-                    park_yearly
-                    park_yearly_add
-                    park_self_wash           
-                }
+    }
+    price {
+        data {
+            id
+            attributes {
+                daycare_day
+                daycare_day_add
+                daycare_fiveDays
+                daycare_fiveDays_add
+                daycare_halfDay
+                daycare_halfDay_add
+                daycare_tenDays
+                daycare_tenDays_add
+                park_single
+                park_single_add
+                park_punch
+                park_monthly
+                park_monthly_add
+                park_yearly
+                park_yearly_add
+                park_self_wash           
+
             }
         }
-    }`;
+    }
+    posts {
+        data {
+            attributes {
+                Title
+                Body
+                Media {
+                    data {
+                        attributes {
+                            formats
+                        }
+                    }
+                }
+                Expiration
+            }
+        }
+    }
+}`;
 
   useEffect(() => {
     setLoading(true);

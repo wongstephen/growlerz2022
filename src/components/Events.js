@@ -4,9 +4,7 @@ import { EventsCardLoading } from "./EventsCardLoading";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-export const Events = () => {
-  const { data: posts } = useFetchStrapi("posts?populate=%2A");
-
+export const Events = ({ posts }) => {
   return (
     <section
       id="events"
@@ -23,10 +21,10 @@ export const Events = () => {
         </div>{" "}
         <div className="flex flex-wrap w-full pt-12 -mx-4 justify-lef ">
           {posts ? (
-            posts.data.map((post, idx) => (
+            posts.map((post, idx) => (
               <div
                 className={`w-full md:w-1/2 px-4 mb-4 ${
-                  posts.data.length % 2 !== 0 && "md:first:w-full"
+                  posts.length % 2 !== 0 && "md:first:w-full"
                 }`}
                 key={idx}
               >
@@ -41,7 +39,8 @@ export const Events = () => {
                       children={post.attributes.Body}
                       linkTarget={"_blank"}
                     />
-                    {post.attributes.Media.data && (
+                    {post?.attributes?.Media?.data?.attributes?.formats?.small
+                      ?.url && (
                       <img
                         className="w-full h-auto max-w-xs mx-auto"
                         src={
@@ -52,6 +51,20 @@ export const Events = () => {
                         alt="Event and annoucement img"
                       />
                     )}
+                    {!post?.attributes?.Media?.data?.attributes?.formats?.small
+                      ?.url &&
+                      post?.attributes?.Media?.data?.attributes?.formats
+                        ?.thumbnail?.url && (
+                        <img
+                          className="w-full h-auto max-w-xs mx-auto"
+                          src={
+                            process.env.REACT_APP_POSTMEDIA +
+                            post.attributes.Media.data.attributes.formats
+                              .thumbnail.url
+                          }
+                          alt="Event and annoucement img"
+                        />
+                      )}
                   </div>
                 </div>
               </div>
