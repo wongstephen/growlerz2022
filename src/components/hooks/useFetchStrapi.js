@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-const URL_API = process.env.REACT_APP_STRAPI;
+const URL_API = process.env.REACT_APP_API;
 
 const useFetchStrapi = (path) => {
   const [data, setData] = useState(null);
