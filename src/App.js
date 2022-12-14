@@ -1,6 +1,6 @@
-import { lazy, useRef, useState } from "react";
-import "./App.css";
+import React, { useRef, useState } from "react";
 import useFetchStrapi from "./components/hooks/useFetchStrapi";
+import "./App.css";
 
 import { Welcome } from "./components/Welcome";
 import { NavCompact } from "./components/NavCompact";
@@ -14,13 +14,19 @@ import { Alert } from "./components/Alert";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import useFetchGraphql from "./components/hooks/useFetchGraphql";
+
 function App() {
   const [open, setOpen] = useState(false);
-  const { data: hourData } = useFetchStrapi("business-hour/");
-  const { data: priceData } = useFetchStrapi("price/");
-  const { data: alertData } = useFetchStrapi("alert/");
 
-  // Refs for each section.
+  // const { data: priceData } = useFetchStrapi("price/");
+
+  const {
+    data: gqlData,
+    error: gqlError,
+    loading: gqlLoading,
+  } = useFetchGraphql();
+
   const servicesRef = useRef();
   const pricingRef = useRef();
   const eventsRef = useRef();
@@ -53,15 +59,17 @@ function App() {
       <header className="relative mx-auto overflow-hidden max-w-7xl">
         <NavFull setOpen={setOpen} open={open} scrollTo={scrollTo} />
         <NavCompact setOpen={setOpen} open={open} scrollTo={scrollTo} />
-        {alertData?.data && <Alert data={alertData.data} />}
         <Welcome />
+        {gqlData?.alert?.data && (
+          <Alert data={gqlData?.alert?.data?.attributes} />
+        )}
       </header>
       <main>
         <span ref={servicesRef}>
-          <Services hours={hourData} />
+          <Services hours={gqlData?.businessHour?.data?.attributes} />
         </span>
         <span ref={pricingRef}>
-          <Pricing price={priceData} />
+          <Pricing price={gqlData?.price?.data?.attributes} />
         </span>
         <span ref={eventsRef}>
           <Events />
@@ -74,7 +82,10 @@ function App() {
         </span>
       </main>
       <footer>
-        <Footer hours={hourData} scrollTo={scrollTo} />
+        <Footer
+          hours={gqlData?.businessHour?.data?.attributes}
+          scrollTo={scrollTo}
+        />
       </footer>
       <ToTop />
     </div>

@@ -19,7 +19,7 @@ export const NavFull = ({ setOpen, scrollTo }) => {
                 src={require("../assets/logo-clear-bg.webp")}
                 alt=""
               />
-              <span className="ml-2 md:hidden">Growlerz</span>
+              <span className="-ml-2 md:hidden">Growlerz</span>
             </p>
           </div>
 

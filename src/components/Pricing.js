@@ -23,14 +23,14 @@ export const Pricing = ({ price }) => {
             <>
               <PriceCard
                 title="Single Entry"
-                mainPrice={price.data.attributes.park_single}
+                mainPrice={price.park_single}
                 description={`Entry for one dog. Discounted pricing for additional dogs from the same household.`}
                 subdescription={["Puchase at the door"]}
                 // link="#"
               />
               <PriceCard
                 title="Punch Card"
-                mainPrice={price.data.attributes.park_punch}
+                mainPrice={price.park_punch}
                 popular={true}
                 description={`Get 11 entries for the price of 10, for one dog. Discounted pricing for additional dogs from the same household.`}
                 subdescription={[`Purchase online or at the door.`]}
@@ -38,16 +38,16 @@ export const Pricing = ({ price }) => {
               />
               <PriceCard
                 title="Membership"
-                mainPrice={price.data.attributes.park_monthly}
+                mainPrice={price.park_monthly}
                 mainPriceDesc="per month"
                 popular={false}
-                description={`Unlimited entries for one dog. Also available, yearly membership for one dog available for $${price.data.attributes.park_yearly}. Discounted pricing for additional dogs from the same household.`}
+                description={`Unlimited entries for one dog. Also available, yearly membership for one dog available for $${price.park_yearly}. Discounted pricing for additional dogs from the same household.`}
                 subdescription={[``]}
                 link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="Self-Wash Station"
-                mainPrice={price.data.attributes.park_self_wash}
+                mainPrice={price.park_self_wash}
                 popular={false}
                 description={`If you have a dirty dog, bring them to Growlerz and take advantage of our new self-wash station! Our station is open during dog park hours, except for Wednesdays. Plus, if you're a member, you'll get an additional 12% off the regular price.`}
                 // subdescription={[]}
@@ -90,21 +90,21 @@ export const Pricing = ({ price }) => {
             <>
               <PriceCard
                 title="Half Day"
-                mainPrice={price.data.attributes.daycare_halfDay}
+                mainPrice={price.daycare_halfDay}
                 description={`5 hours day care for one dog.`}
                 subdescription={[]}
                 link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="Single Day"
-                mainPrice={price.data.attributes.daycare_day}
+                mainPrice={price.daycare_day}
                 description={`Full day care for one dog. `}
                 subdescription={[]}
                 link="https://growlerz.portal.gingrapp.com/#/secure/shop/package-retail/false/package"
               />
               <PriceCard
                 title="5 Days"
-                mainPrice={price.data.attributes.daycare_fiveDays}
+                mainPrice={price.daycare_fiveDays}
                 popular={true}
                 description={`Five entries for one dog. Save $10 over regular single day admissions.`}
                 subdescription={[]}
@@ -112,7 +112,7 @@ export const Pricing = ({ price }) => {
               />
               <PriceCard
                 title="10 Days"
-                mainPrice={price.data.attributes.daycare_tenDays}
+                mainPrice={price.daycare_tenDays}
                 popular={false}
                 description={`Ten entries for one dog. Save $30 over regular single day admissions.`}
                 subdescription={[]}

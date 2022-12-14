@@ -31,7 +31,7 @@ export const Services = ({ data, hours, servicesRef }) => {
               <ReactMarkdown
                 className="mb-8 text-sm font-medium leading-tight text-gray-800 whitespace-pre-line md:text-base md:leading-normal"
                 rehypePlugins={[rehypeRaw]}
-                children={hours.data.attributes.Park}
+                children={hours.Park}
               />
             )}
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
@@ -52,7 +52,7 @@ export const Services = ({ data, hours, servicesRef }) => {
               <ReactMarkdown
                 className="mb-8 text-sm font-medium leading-tight text-gray-800 whitespace-pre-line md:text-base md:leading-normal"
                 rehypePlugins={[rehypeRaw]}
-                children={hours.data.attributes.Daycare}
+                children={hours.Daycare}
               />
             )}
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
