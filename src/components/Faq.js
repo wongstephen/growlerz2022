@@ -33,12 +33,17 @@ const faqs = [
   {
     question: "Do you serve food?",
     content:
-      "Growlerz does not serve food. BUT, you are welcome to bring in food. There are some great eats in the neighborhood and we occasionally have a food truck come to serve.",
+      "No, we do not have a kitchen or serve food at Growlerz. However, you are welcome to bring in your own food. There are some great restaurants in the neighborhood, and we occasionally have food trucks come by to serve our customers.",
   },
   {
     question: "Who watches my dog in the play park?",
     content:
-      "While using the play park, you are responsible for your dogs behavior and clean-up. There will be staff on duty and will help some in certain situations (it takes a village!) but they are not responsible for your dog. Dogs showing signs of aggression or escalating behavior may be asked to take a time out or leave.",
+      "As a pet owner, it's your responsibility to make sure your dog behaves well and that you clean up after them at the park. While park staff may be able to help in some situations, they are not responsible for your dog's behavior or for cleaning up after them. If your dog shows signs of aggression or starts to escalate, you may be asked to take a break or leave the park. It's crucial to always watch your dog carefully while at the park and to take action if needed to ensure a safe and enjoyable experience for everyone.",
+  },
+  {
+    question: "Do I need a dog for entry?",
+    content:
+      "Growlerz is a great place for guests to exercise their dogs, and you are welcome to come in and watch the dogs play, too. If you're feeling thirsty, you can grab a beer at the park and enjoy it while you watch the pups. We also offer growler fills to go, so you can take some of your favorite beer with you when you leave. Just remember to drink responsibly and always supervise your dog while at the park.",
   },
   {
     question: "Do you allow puppies?",
@@ -48,17 +53,17 @@ const faqs = [
   {
     question: "Do you allow kids?",
     content:
-      "Unfortunately, no. We are a 21 and older business. Sorry, no one under 21 is allowed, including babies. It is the law.",
+      "We are a 21 and older business and do not allow anyone under the age of 21, including babies. This is in accordance with state law.",
   },
   {
     question: "Do I need a dog for entry?",
     content:
-      "The facility is primarily for guests to exercise their dogs, but you are more than welcome to come in, grab a beer, and get your dog fix watching the pups play. Or, stop in for a growler fill to go!",
+      "Growlerz is a great place for guests to exercise their dogs, and you are welcome to come in and watch the dogs play, too. If you're feeling thirsty, you can grab a beer at the park and enjoy it while you watch the pups. We also offer growler fills to go, so you can take some of your favorite beer with you when you leave. Just remember to drink responsibly and always supervise your dog while at the park.",
   },
   {
     question: "Do you offer private rentals?",
     content:
-      "We do! We offer full facility rentals or designated sections for your special event. Send us an email found on our contact page and ask for details.",
+      "Yes, we do! Our facility can be rented in its entirety or in designated sections for special events. If you're interested in booking a private rental, please send us an email through our contact page for more information.",
   },
 ];
 export const Faq = () => {

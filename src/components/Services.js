@@ -20,7 +20,7 @@ export const Services = ({ data, hours, servicesRef }) => {
             Services
           </span>
           <h1 className="mb-6 text-3xl font-bold leading-snug tracking-tight text-gray-900 md:text-5xl lg:text-7xl md:leading-snug lg:leading-snug">
-            The best place in Seattle for you and your dog.
+            Enjoy the Best of Seattle with Your Furry Friend at Growlerz
           </h1>
           {/* Play Park */}
           <div className="my-16" ref={playParkRef}>
