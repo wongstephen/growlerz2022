@@ -56,12 +56,11 @@ export const Services = ({ data, hours, servicesRef }) => {
               />
             )}
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
-              Looking for a safe and fun place for your dog to play while you're
-              busy? Growlerz Seattle dog park is the perfect solution for busy
-              pet parents! Our experienced and loving staff will provide your
-              furry family member with plenty of exercise, socialization, and
-              TLC in a stimulating environment. Your dog will have a great time
-              and you can have peace of mind knowing they're in good hands.
+              Growlerz Seattle dog park is the perfect solution for busy pet
+              parents. Our experienced and loving staff will provide your furry
+              family member with plenty of exercise, socialization, and care in
+              a stimulating environment. Your dog will have a great time and you
+              can have peace of mind knowing they're in good hands.
             </p>
             <DayCare dayCareRef={dayCareRef} />
           </div>
@@ -71,12 +70,11 @@ export const Services = ({ data, hours, servicesRef }) => {
               Taproom
             </p>
             <p className="mb-8 text-lg font-medium leading-loose text-gray-500 md:text-xl md:leading-loose">
-              Growlerz Taproom is a social place where you can enjoy a drink
-              with or without your dog. Our taproom features 8 craft beers on
-              tap and plenty of seating, so you can stay for hours or just stop
-              by for a quick drink. And because our taproom is open during Play
-              Park hours, you can easily combine a visit to the park with a trip
-              to the taproom.
+              Growlerz Taproom is the perfect spot to unwind with friends, both
+              human and furry. With 8 delicious craft beers on tap and plenty of
+              seating, you can stay for a while or just grab a quick drink.
+              Plus, our taproom is open during Play Park hours, so you can
+              easily make a day of it and enjoy the park and a cold beer.
             </p>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import useFetchStrapi from "./hooks/useFetchStrapi";
 import { EventsCardLoading } from "./EventsCardLoading";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
