@@ -2,7 +2,10 @@ import React from "react";
 
 export const PriceCardLoading = () => {
   return (
-    <div className="w-full p-4 md:w-1/2 animate-pulse">
+    <div
+      className="w-full p-4 md:w-1/2 animate-pulse"
+      data-testid="price-loading"
+    >
       <div className="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md ">
         <div className="px-8 pb-8">
           <div className="flex flex-wrap items-center justify-between w-20 mb-6invisible">

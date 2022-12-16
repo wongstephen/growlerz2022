@@ -62,7 +62,7 @@ const Footer = ({ hours, scrollTo }) => {
             </ul>
           </div>
           {/* Newsletter */}
-          {/* <div className="w-full px-4 md:w-1/3 lg:w-4/12">
+          {/* <div className="w-full px-4 md:w-1/3 lg:w-4/12" data-testid='footer-newsletter'>
             <h3 className="mb-5 text-lg font-bold text-gray-900">Newsletter</h3>
             <div className="flex flex-wrap">
               <div className="w-full py-1 lg:flex-1 lg:py-0 lg:mr-3">

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Welcome = () => {
   return (
-    <div className="py-8 md:py-12 lg:py-16">
+    <div className="py-8 md:py-12 lg:py-16" data-testid="section-1">
       <div className="container px-6 mx-auto">
         <div className="relative z-10 -mx-2 md:flex-wrap md:flex md:flex-row">
           <div className="w-full mb-12 md:w-1/2 md:mb-0 md:rounded-lg">
@@ -35,6 +35,7 @@ export const Welcome = () => {
                 className="m-auto rounded-tl-xl rounded-br-xl w-80 h-auto md:w-80 md:h-80 lg:w-96 lg:h-auto xl:w-[32rem] xl:h-auto border-2 border-teal-100 my-0"
                 src={require("../assets/welcome-hero.jpg")}
                 alt="Two dogs"
+                data-testid="hero-img"
               />
             </div>
           </div>

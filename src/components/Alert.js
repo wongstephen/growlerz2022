@@ -1,9 +1,12 @@
 import React from "react";
 
 export const Alert = ({ data }) => {
-  console.log();
   return (
-    <section id="events" className="max-w-5xl py-6 mx-auto bg-transparent">
+    <section
+      id="events"
+      className="max-w-5xl py-6 mx-auto bg-transparent"
+      data-testid="alert-section"
+    >
       <div className="flex gap-4 px-6 py-6 mx-auto transition-all bg-teal-100 shadow-sm hover:shadow-md md:rounded-lg md:max-w-prose">
         <div>
           <svg
@@ -22,8 +25,15 @@ export const Alert = ({ data }) => {
           </svg>
         </div>
         <div>
-          <p className="mb-6 text-xl font-bold tracking-wider">{data.Title}</p>
-          <p className="leading-loose tracking-wide">{data.Body}</p>
+          <p
+            className="mb-6 text-xl font-bold tracking-wider"
+            data-testid="alert-title"
+          >
+            {data && data.Title}
+          </p>
+          <p className="leading-loose tracking-wide" data-testid="alert-body">
+            {data && data.Body}
+          </p>
         </div>
       </div>
     </section>

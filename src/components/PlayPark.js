@@ -101,7 +101,7 @@ export const PlayPark = ({ playParkRef }) => {
             className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer r md:text-xl md:leading-loose"
             onClick={() => {
               setShowDetails(!showDetails);
-              playParkRef.current.scrollIntoView({ behavior: "smooth" });
+              playParkRef.current.scrollIntoView({});
             }}
           >
             <svg

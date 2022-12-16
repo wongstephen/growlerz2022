@@ -59,7 +59,7 @@ export const DayCare = ({ dayCareRef }) => {
               className="mb-8 text-lg font-medium leading-loose text-teal-500 cursor-pointer r md:text-xl md:leading-loose"
               onClick={() => {
                 setShowDetails(!showDetails);
-                dayCareRef.current.scrollIntoView({ behavior: "smooth" });
+                dayCareRef.current.scrollIntoView({ });
               }}
             >
               <svg
