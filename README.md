@@ -2,9 +2,7 @@
 
 ## Summary
 
-Growlerzseattle.com was created to replace the previous website built with WIX. This new website is designed to be responsive and perform well for visitors, as well as easy for the business owners to update with events, announcements, prices, and business hours through a self-hosted headless CMS.
-
-The site will be launced publics late 2022 to early 2023 to coincide.
+I recently had the opportunity to work on a new website for Growlerz Seattle, a local dog park that I frequent. The old website, built with WIX, was not meeting the needs of the business or its customers, so I developed a responsive website that the owners could easily update with an admin portal. The new website, growlerzseattle.com, is designed to be responsive and perform well for visitors, as well as easy for the business owners to update with events, announcements, prices, and business hours through a self-hosted headless CMS. It was a great experience to be able to use my skills to solve a problem and make a positive impact on a business that I care about.
 
 ### Hosted at
 
