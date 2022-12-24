@@ -7,7 +7,7 @@ export const EventsCardLoading = () => {
         <div className="h-full group">
           <div className="relative h-full px-8 pt-16 pb-8 transition duration-200 bg-white rounded-md shadow-md group group-hover:bg-trasnparent hover:shadow-xl">
             <div className="w-1/2 mb-8 bg-slate-200">
-              <h3 className="invisible mb-4 text-2xl">Title of Event</h3>
+              <h3 className="invisible mb-4 text-2xl">Hello World</h3>
             </div>
             <div className="mb-8 bg-slate-200">
               <p className="invisible bg-slate-200">

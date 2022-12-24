@@ -7,6 +7,9 @@ export const ToTop = () => {
     window.scrollY > 1000 ? setVisible(true) : setVisible(false);
   });
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div
       className={`fixed flex items-center justify-center w-10 h-10 bg-teal-500 rounded-full bottom-8 right-8 transition-all ${
@@ -14,7 +17,8 @@ export const ToTop = () => {
           ? "opacity-60 translate-y-0 cursor-pointer"
           : "opacity-0 translate-y-2 pointer-events-none"
       }`}
-      onClick={() => window.scrollTo(0, 0)}
+      data-testid="scroll-top-btn"
+      onClick={handleClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

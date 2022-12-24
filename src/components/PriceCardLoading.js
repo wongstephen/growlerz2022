@@ -9,8 +9,11 @@ export const PriceCardLoading = () => {
       <div className="flex flex-col pt-8 pb-8 bg-white rounded-md shadow-md ">
         <div className="px-8 pb-8">
           <div className="flex flex-wrap items-center justify-between w-20 mb-6invisible">
-            <h3 className="invisible mr-3 text-lg font-medium text-gray-800 md:text-xl">
-              title
+            <h3
+              className="invisible mr-3 text-lg font-medium text-gray-800 md:text-xl"
+              // style={{ visibility: "hidden" }}
+            >
+              Title
             </h3>
           </div>
           <div className="mb-6 bg-slate-200">

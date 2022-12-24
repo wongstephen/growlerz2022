@@ -58,10 +58,10 @@ function App() {
       <header className="relative mx-auto overflow-hidden max-w-7xl">
         <NavFull setOpen={setOpen} open={open} scrollTo={scrollTo} />
         <NavCompact setOpen={setOpen} open={open} scrollTo={scrollTo} />
-        <Welcome />
         {gqlData?.alert?.data && (
           <Alert data={gqlData?.alert?.data?.attributes} />
         )}
+        <Welcome />
       </header>
       <main>
         <span ref={servicesRef}>
