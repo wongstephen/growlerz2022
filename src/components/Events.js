@@ -4,6 +4,17 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
 export const Events = ({ posts }) => {
+  // removes expired post indicated by post.attributes.Expiration
+  const unexpiredPosts = () => {
+    return posts.filter((post) => {
+      return (
+        !post.attributes.Expiration ||
+        new Date(post.attributes.Expiration).toDateString() <=
+          new Date().toDateString()
+      );
+    });
+  };
+
   return (
     <section
       id="events"
@@ -20,11 +31,14 @@ export const Events = ({ posts }) => {
         </div>{" "}
         <div className="flex flex-wrap w-full pt-12 -mx-4 justify-lef ">
           {posts ? (
-            posts.map((post, idx) => (
+            unexpiredPosts().map((post, idx) => (
               <div
-                className={`w-full md:w-1/2 px-4 mb-4 ${
-                  posts.length % 2 !== 0 && "md:first:w-full"
-                }`}
+                className={
+                  // If there is an odd number of post, the post will become full width.
+                  `w-full md:w-1/2 px-4 mb-4 ${
+                    unexpiredPosts().length % 2 !== 0 && "md:first:w-full"
+                  }`
+                }
                 key={idx}
               >
                 <div className="h-full group">
